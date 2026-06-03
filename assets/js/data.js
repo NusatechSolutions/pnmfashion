@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    RAJTEX — Product Data
    Generated catalog using available product imagery.
    ========================================================= */
@@ -149,15 +149,15 @@ RAJTEX_CATEGORIES.forEach(cat => {
 // Reseller testimonials
 const RESELLER_TESTIMONIALS = [
   { name: 'Nurul A.', role: 'Shopee Top Seller', city: 'Kuala Lumpur, MY', text: 'I started flipping their kaftans last Raya — pulled in RM 3,200 profit in 6 weeks on 1 order. Restock cycle is fast.', rating: 5, avatar: 'N' },
-  { name: 'Putri H.', role: 'TikTok Live Reseller', city: 'Jakarta, ID', text: 'Mereka yang serius soal volume. Saya order 80 pcs, dapat margin yang sangat sehat. Pengiriman ke Jakarta 9 hari.', rating: 5, avatar: 'P' },
+  { name: 'Putri H.', role: 'Live Commerce Reseller', city: 'Jakarta, ID', text: 'Mereka yang serius soal volume. Saya order 80 pcs, dapat margin yang sangat sehat. Pengiriman ke Jakarta 9 hari.', rating: 5, avatar: 'P' },
   { name: 'Vivian L.', role: 'Boutique Owner', city: 'Penang, MY', text: 'The Indian saree sets sell themselves to my Malay-Indian customers. WhatsApp ordering is the only thing I want from a wholesaler.', rating: 5, avatar: 'V' },
-  { name: 'Anh T.', role: 'Instagram Reseller', city: 'Ho Chi Minh, VN', text: 'Kids shirts are a winner. Quality matches what I see in malls but at half the price. Already on my third reorder.', rating: 5, avatar: 'A' },
+  { name: 'Anh T.', role: 'Online Reseller', city: 'Ho Chi Minh, VN', text: 'Kids shirts are a winner. Quality matches what I see in malls but at half the price. Already on my third reorder.', rating: 5, avatar: 'A' },
   { name: 'Siti R.', role: 'Lazada Seller', city: 'Johor Bahru, MY', text: 'Catalog terupdate setiap minggu. Senang nak pilih, senang nak quote via WhatsApp. Pasukan jualan responsif.', rating: 5, avatar: 'S' }
 ];
 
 // Showroom / contact info
 const SHOWROOMS = [
-  { city: 'Kuala Lumpur', address: 'Lot 23, Jalan Tun Razak, Pudu Sentral, 55100 KL', phone: '+60 12-345 6789', wa: '60123456789', hours: 'Mon–Sat 10am – 7pm', flag: '🇲🇾' },
+  { city: 'Kuala Lumpur', address: 'Campbell Complex, Lot 25 & 26 Lower Ground, 98 Jalan Dang Wangi, 50100 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia', phone: '+60 12-224 5717', wa: '60122245717', hours: 'Mon–Sat 10am – 7pm', flag: '🇲🇾' },
   { city: 'Surat (HQ)', address: '4th Floor, Millennium Tower, Ring Road, Surat, Gujarat 395002', phone: '+91 98250 12345', wa: '919825012345', hours: 'Mon–Sat 11am – 8pm IST', flag: '🇮🇳' },
   { city: 'Jakarta (Liaison)', address: 'Tanah Abang Block A, Lt. 3 Los DD-32, Jakarta Pusat', phone: '+62 821 1234 5678', wa: '6282112345678', hours: 'By appointment', flag: '🇮🇩' }
 ];
