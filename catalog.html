@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products & Services — PNM Fashion Textiles</title>
+  <meta name="description" content="Full product catalog and service offerings from PNM Fashion. Songket, sarees, kaftans, cotton, polyester. Wholesale fabric supply, custom printing, packaging and delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231E3A5F'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='26' fill='%23E8B547' text-anchor='middle' font-weight='700'%3EP%3C/text%3E%3C/svg%3E">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAF6F0; --bg-soft: #F2EAE0; --bg-card: #FFFFFF;
+      --ink: #1C1510; --ink-soft: #4A3830; --ink-faint: #8A7870;
+      --navy: #6B1A1A; --navy-deep: #4A0E0E; --navy-light: #8B2020;
+      --gold: #C9952A; --gold-soft: #E8C97A;
+      --teal: #6B3A1A;
+      --line: rgba(28,31,38,0.1); --line-soft: rgba(28,31,38,0.06);
+      --shadow: 0 4px 20px rgba(28,31,38,0.06);
+      --shadow-lg: 0 12px 40px rgba(28,31,38,0.1);
+      --t: 280ms cubic-bezier(0.4,0,0.2,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; font-size: 15px; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    h1,h2,h3,h4 { font-family: 'Lora', Georgia, serif; font-weight: 500; line-height: 1.2; letter-spacing: -0.01em; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+    @media (max-width: 768px) { .container { padding: 0 20px; } }
+    .eyebrow { font-family: 'Poppins', sans-serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+
+    /* Hide all prices */
+    [data-price-myr], .product-card__price, .price-tag, .price-bulk, .price-label, .price-row, .product-price { display: none !important; }
+
+    /* TOPBAR */
+    .topbar { background: var(--navy-deep); color: rgba(255,255,255,0.85); font-size: 0.74rem; padding: 8px 0; }
+    .topbar__inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .topbar__left, .topbar__right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .topbar a { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); transition: color var(--t); }
+    .topbar a:hover { color: var(--gold-soft); }
+    .topbar svg { width: 13px; height: 13px; }
+    @media (max-width: 640px) { .topbar { font-size: 0.7rem; } .topbar__left { display: none; } }
+
+    /* HEADER */
+    .site-header { background: var(--bg); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--line-soft); box-shadow: 0 1px 3px rgba(28,31,38,0.03); }
+    .header__inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; gap: 24px; }
+    @media (max-width: 768px) { .header__inner { padding: 14px 20px; } }
+    .header__logo { display: flex; align-items: center; gap: 12px; }
+    .header__logo-mark { width: 44px; height: 44px; background: var(--navy); color: var(--gold); display: grid; place-items: center; font-family: 'Lora', serif; font-size: 1.4rem; font-weight: 700; border-radius: 8px; }
+    .header__logo-text { display: flex; flex-direction: column; gap: 1px; }
+    .header__logo-name { font-family: 'Lora', serif; font-size: 1.15rem; font-weight: 600; color: var(--navy); line-height: 1; }
+    .header__logo-sub { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; }
+    .header__nav { display: flex; gap: 32px; align-items: center; }
+    @media (max-width: 720px) { .header__nav { display: none; } }
+    .header__nav a { font-size: 0.84rem; font-weight: 500; color: var(--ink-soft); transition: color var(--t); position: relative; padding: 6px 0; }
+    .header__nav a:hover, .header__nav a.active { color: var(--navy); }
+    .header__nav a.active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); }
+    .header__cta { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 10px 20px; font-size: 0.78rem; font-weight: 600; border-radius: 6px; transition: all var(--t); }
+    .header__cta:hover { background: #1fbb5a; transform: translateY(-1px); }
+    .header__cta svg { width: 14px; height: 14px; }
+
+    .mob-btn { display: none; width: 40px; height: 40px; background: none; border: none; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+    .mob-btn span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 300ms ease; }
+    .mob-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .mob-btn.open span:nth-child(2) { opacity: 0; }
+    .mob-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 720px) { .mob-btn { display: flex; } }
+
+    .mob-drawer { position: fixed; top: 0; right: -100%; width: min(320px,85vw); height: 100vh; background: var(--bg); z-index: 1000; padding: 80px 32px 32px; transition: right 350ms cubic-bezier(0.4,0,0.2,1); overflow-y: auto; box-shadow: -8px 0 24px rgba(0,0,0,0.1); }
+    .mob-drawer.open { right: 0; }
+    .mob-drawer a { display: block; font-family: 'Lora', serif; font-size: 1.4rem; color: var(--navy); padding: 14px 0; border-bottom: 1px solid var(--line-soft); }
+    .mob-drawer a.active { color: var(--gold); }
+    .mob-drawer-wa { background: #25D366; color: white !important; text-align: center; border-radius: 6px; margin-top: 24px; padding: 14px !important; border: none !important; font-family: 'Poppins', sans-serif !important; font-size: 0.85rem !important; font-weight: 600; }
+    .mob-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; }
+    .mob-overlay.open { display: block; }
+
+    /* BUTTONS */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; font-family: 'Poppins', sans-serif; font-size: 0.84rem; font-weight: 600; cursor: pointer; border: none; transition: all var(--t); border-radius: 6px; }
+    .btn--navy { background: var(--navy); color: white; }
+    .btn--navy:hover { background: var(--navy-deep); transform: translateY(-1px); }
+    .btn--gold { background: var(--gold); color: var(--ink); }
+    .btn--gold:hover { background: #D8A53A; }
+    .btn--outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+    .btn--outline:hover { background: var(--navy); color: white; }
+    .btn--wa { background: #25D366; color: white; }
+    .btn--wa:hover { background: #1fbb5a; }
+    .btn--sm { padding: 9px 20px; font-size: 0.76rem; }
+    .btn--block { width: 100%; justify-content: center; }
+
+    /* PAGE HERO */
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+      color: white;
+      padding: 72px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at top right, rgba(232,181,71,0.1) 0%, transparent 60%);
+    }
+    .page-hero .container { position: relative; }
+    .page-hero .eyebrow { color: var(--gold-soft); display: block; margin-bottom: 14px; }
+    .page-hero h1 { font-family: 'Lora', serif; font-size: clamp(2.4rem, 5vw, 3.8rem); color: white; margin-bottom: 16px; font-weight: 600; }
+    .page-hero p { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+    /* TABS */
+    .tabs-section { background: var(--bg-soft); padding: 0; border-bottom: 1px solid var(--line); }
+    .tabs-row {
+      display: flex; gap: 0;
+      justify-content: center;
+      overflow-x: auto;
+    }
+    .tab-btn {
+      background: none; border: none; cursor: pointer;
+      padding: 18px 24px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.86rem; font-weight: 600;
+      color: var(--ink-soft);
+      letter-spacing: 0.02em;
+      transition: all var(--t);
+      position: relative;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--navy); }
+    .tab-btn.active { color: var(--navy); }
+    .tab-btn.active::after {
+      content: ''; position: absolute; bottom: 0; left: 20%; right: 20%;
+      height: 3px; background: var(--gold);
+    }
+
+    /* SECTION */
+    .section { padding: 72px 0; }
+    .section-header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+    .section-header h2 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin: 12px 0 16px; color: var(--navy); }
+    .section-header p { font-size: 0.96rem; color: var(--ink-soft); line-height: 1.7; }
+
+    /* PRODUCT CATEGORY GRID (top-of-page browse) */
+    .cat-pills {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .cat-pill {
+      padding: 8px 18px;
+      background: var(--bg-card);
+      border: 1.5px solid var(--line);
+      border-radius: 100px;
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: all var(--t);
+    }
+    .cat-pill:hover { border-color: var(--navy); color: var(--navy); }
+    .cat-pill.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+    /* PRODUCT GRID */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    @media (max-width: 600px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+    @media (max-width: 400px) { .product-grid { grid-template-columns: 1fr; } }
+
+    .product-card {
+      background: var(--bg-card);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--line-soft);
+      transition: all var(--t);
+      position: relative;
+    }
+    .product-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+    .product-card__img {
+      aspect-ratio: 3/4; overflow: hidden; background: var(--bg-soft);
+    }
+    .product-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 700ms ease; }
+    .product-card:hover .product-card__img img { transform: scale(1.05); }
+    .product-card__body { padding: 16px 18px 20px; }
+    .product-card__name { font-family: 'Lora', serif; font-size: 1.02rem; color: var(--navy); margin-bottom: 4px; font-weight: 600; }
+    .product-card__meta { font-size: 0.7rem; color: var(--ink-faint); margin-bottom: 12px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 500; }
+    .product-card__cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.74rem; font-weight: 600;
+      color: var(--navy);
+      transition: color var(--t);
+    }
+    .product-card__cta:hover { color: var(--gold); }
+    .product-card__cta svg { width: 12px; height: 12px; }
+    .product-card__badge {
+      position: absolute; top: 12px; left: 12px;
+      background: var(--gold); color: var(--navy);
+      padding: 4px 10px; font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      border-radius: 4px;
+    }
+    .product-card__badge--navy { background: var(--navy); color: white; }
+
+    /* PRICING NOTE */
+    .pricing-note {
+      max-width: 720px;
+      margin: 0 auto 40px;
+      padding: 18px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--gold);
+      border-left: 4px solid var(--gold);
+      border-radius: 6px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .pricing-note__icon {
+      flex-shrink: 0;
+      width: 38px; height: 38px;
+      background: rgba(232,181,71,0.15);
+      color: var(--gold);
+      border-radius: 50%;
+      display: grid; place-items: center;
+    }
+    .pricing-note__icon svg { width: 18px; height: 18px; }
+    .pricing-note__text { flex: 1; min-width: 200px; }
+    .pricing-note__text strong { color: var(--navy); display: block; font-size: 0.9rem; margin-bottom: 2px; }
+    .pricing-note__text span { font-size: 0.82rem; color: var(--ink-soft); }
+
+    /* SERVICES GRID */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 768px) { .service-grid { grid-template-columns: 1fr; } }
+
+    .service-block {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      padding: 32px;
+      background: var(--bg-card);
+      border-radius: 10px;
+      border: 1px solid var(--line-soft);
+      transition: all var(--t);
+    }
+    .service-block:hover { box-shadow: var(--shadow); border-color: var(--gold); }
+    .service-block__icon {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: var(--gold);
+      border-radius: 12px;
+      display: grid; place-items: center;
+      flex-shrink: 0;
+    }
+    .service-block__icon svg { width: 28px; height: 28px; }
+    .service-block__title { font-family: 'Lora', serif; font-size: 1.2rem; color: var(--navy); font-weight: 600; margin-bottom: 8px; }
+    .service-block__desc { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 14px; }
+    .service-block__tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .service-block__tag {
+      font-size: 0.68rem; letter-spacing: 0.05em;
+      padding: 3px 10px;
+      background: var(--bg-soft);
+      color: var(--ink-soft);
+      border-radius: 100px;
+      font-weight: 500;
+    }
+
+    /* PROCESS STEPS */
+    .process-strip {
+      background: var(--navy);
+      color: white;
+      padding: 64px 0;
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+    @media (max-width: 900px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .process-grid { grid-template-columns: 1fr; } }
+
+    .process-step { text-align: center; position: relative; }
+    .process-step__num {
+      width: 48px; height: 48px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      margin: 0 auto 16px;
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .process-step__title { font-family: 'Lora', serif; font-size: 1.05rem; margin-bottom: 6px; color: white; font-weight: 600; }
+    .process-step__desc { font-size: 0.84rem; color: rgba(255,255,255,0.65); line-height: 1.55; }
+
+    /* CTA STRIP */
+    .cta-strip {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 56px 0;
+      text-align: center;
+    }
+    .cta-strip h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 12px; }
+    .cta-strip p { color: rgba(28,31,38,0.78); margin-bottom: 28px; font-size: 0.96rem; max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .cta-strip__btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    @media (max-width: 500px) { .cta-strip__btns { flex-direction: column; align-items: center; } .cta-strip__btns .btn { width: 100%; max-width: 280px; justify-content: center; } }
+
+    /* FOOTER */
+    .site-footer { background: var(--navy-deep); color: rgba(255,255,255,0.75); padding: 48px 0 20px; }
+    .footer__inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 20px; }
+    @media (max-width: 720px) { .footer__inner { grid-template-columns: 1fr; gap: 24px; } }
+    .footer-brand-name { font-family: 'Lora', serif; font-size: 1.4rem; color: white; font-weight: 600; margin-bottom: 8px; }
+    .footer-tagline { font-size: 0.86rem; line-height: 1.6; color: rgba(255,255,255,0.55); margin-bottom: 14px; }
+    .footer-heading { font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; font-weight: 600; }
+    .footer-link { display: block; font-size: 0.86rem; color: rgba(255,255,255,0.55); margin-bottom: 9px; transition: color var(--t); }
+    .footer-link:hover { color: white; }
+    .footer-bottom { display: flex; justify-content: space-between; font-size: 0.74rem; color: rgba(255,255,255,0.4); flex-wrap: wrap; gap: 8px; }
+
+    /* WhatsApp float */
+    .wa-float { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; background: #25D366; color: white; border-radius: 50%; display: grid; place-items: center; z-index: 998; box-shadow: 0 6px 20px rgba(37,211,102,0.4); transition: transform 200ms ease; overflow: hidden; }
+    .wa-float svg { width: 28px; height: 28px; }
+    .wa-float:hover { transform: scale(1.1); }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="mailto:hello@pnmfashion.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          hello@pnmfashion.com
+        </a>
+        <a href="tel:+60390746663">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 12.7 19.79 19.79 0 012.12 4.07A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Hotline: +60 3-9074 6663
+        </a>
+      </div>
+      <div class="topbar__right"><span>Mon–Sat · KL Showroom Open</span></div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-mark">P</div>
+        <div class="header__logo-text">
+          <div class="header__logo-name">PNM Fashion</div>
+          <div class="header__logo-sub">Textile Wholesale · Since 1992</div>
+        </div>
+      </a>
+      <nav class="header__nav">
+        <a href="index.html">Home</a>
+        <a href="catalog.html" class="active">Products & Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a href="https://wa.me/60123456789?text=Hi%20PNM%20Fashion%2C%20I%27d%20like%20to%20request%20a%20quotation." class="header__cta" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        WhatsApp Quote
+      </a>
+      <button class="mob-btn" id="mobBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mob-overlay" id="mobOverlay"></div>
+  <nav class="mob-drawer" id="mobDrawer">
+    <a href="index.html">Home</a>
+    <a href="catalog.html" class="active">Products & Services</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="https://wa.me/60123456789" class="mob-drawer-wa" target="_blank" rel="noopener">WhatsApp Quote</a>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Products & Services</span>
+      <h1>Our Full Range, Stocked & Ready.</h1>
+      <p>Browse our textile catalog and supporting services in one place. Filter by category, get a feel for what we stock, and WhatsApp for current pricing and availability.</p>
+    </div>
+  </div>
+
+  <!-- TAB NAVIGATION -->
+  <div class="tabs-section">
+    <div class="container">
+      <div class="tabs-row">
+        <button class="tab-btn active" data-tab="products">Product Catalog</button>
+        <button class="tab-btn" data-tab="services">Our Services</button>
+        <button class="tab-btn" data-tab="process">How It Works</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS TAB -->
+  <section class="section" id="tab-products">
+    <div class="container">
+      <div class="pricing-note">
+        <div class="pricing-note__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <div class="pricing-note__text">
+          <strong>Pricing is shared via WhatsApp.</strong>
+          <span>Send us the item name or photo and we'll respond with current stock and pricing the same business day.</span>
+        </div>
+        <a href="https://wa.me/60123456789?text=Hi%2C%20I%27m%20browsing%20your%20catalog%20and%20would%20like%20pricing." class="btn btn--wa btn--sm" target="_blank" rel="noopener">Ask for Pricing</a>
+      </div>
+
+      <div class="cat-pills" id="catPills">
+        <button class="cat-pill active" data-cat="all">All Products</button>
+        <button class="cat-pill" data-cat="songket">Songket</button>
+        <button class="cat-pill" data-cat="sarees">Sarees & Suits</button>
+        <button class="cat-pill" data-cat="kaftans">Kaftans</button>
+        <button class="cat-pill" data-cat="menswear">Mens Shirts</button>
+        <button class="cat-pill" data-cat="kidswear">Boys Wear</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+
+      <div style="text-align:center;margin-top:48px;">
+        <a href="https://wa.me/60123456789?text=Hi%2C%20I%27d%20like%20to%20see%20your%20full%20catalog%20and%20get%20pricing." class="btn btn--navy" target="_blank" rel="noopener">Request Full Catalog via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES TAB -->
+  <section class="section section--soft" id="tab-services" style="display:none;background:var(--bg-soft);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Our Services</span>
+        <h2>Beyond Supply — End-to-End Textile Services</h2>
+        <p>Over three decades we've added services that complement our core wholesale supply. Pick the ones relevant to your business.</p>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-block">
+          <div class="service-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div>
+            <div class="service-block__title">Wholesale Textile Supply</div>
+            <p class="service-block__desc">Our core service — bulk fabric and finished garment supply at competitive rates. Consistent quality, transparent specifications, practical MOQs designed for businesses of all sizes.</p>
+            <div class="service-block__tags">
+              <span class="service-block__tag">Bulk Supply</span>
+              <span class="service-block__tag">MOQ Friendly</span>
+              <span class="service-block__tag">Recurring Orders</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-block">
+          <div class="service-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <div class="service-block__title">Custom Printing & Dyeing</div>
+            <p class="service-block__desc">Bespoke printing on your chosen base fabric — ideal for emerging fashion labels, uniform programmes and limited-run collections. Colour matching available.</p>
+            <div class="service-block__tags">
+              <span class="service-block__tag">MOQ Applies</span>
+              <span class="service-block__tag">Custom Designs</span>
+              <span class="service-block__tag">Brand-Ready</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-block">
+          <div class="service-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/></svg>
+          </div>
+          <div>
+            <div class="service-block__title">Eco-Conscious Packaging</div>
+            <p class="service-block__desc">Recycled and reusable packaging options that minimise waste in the supply chain. Available on request for brands prioritising sustainability.</p>
+            <div class="service-block__tags">
+              <span class="service-block__tag">Sustainable</span>
+              <span class="service-block__tag">On Request</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-block">
+          <div class="service-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="service-block__title">Packing & Local Delivery</div>
+            <p class="service-block__desc">In-house packaging team and reliable delivery across Klang Valley and nearby drop-points. We handle the logistics so you can focus on production.</p>
+            <div class="service-block__tags">
+              <span class="service-block__tag">Klang Valley</span>
+              <span class="service-block__tag">Same-Day</span>
+              <span class="service-block__tag">Distance Terms</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-block">
+          <div class="service-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <div>
+            <div class="service-block__title">Shipment to East Malaysia</div>
+            <p class="service-block__desc">Coordinated shipping to Sabah and Sarawak via trusted logistics partners. Safe, tracked, and scheduled to suit your inventory cycles.</p>
+            <div class="service-block__tags">
+              <span class="service-block__tag">Sabah</span>
+              <span class="service-block__tag">Sarawak</span>
+              <span class="service-block__tag">Tracked</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-block">
+          <div class="service-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div>
+            <div class="service-block__title">Export — Made in Malaysia</div>
+            <p class="service-block__desc">International shipping for overseas buyers seeking authentic Malaysian and Indian textile sourcing. Documentation and freight handled end-to-end.</p>
+            <div class="service-block__tags">
+              <span class="service-block__tag">Worldwide</span>
+              <span class="service-block__tag">Documentation</span>
+              <span class="service-block__tag">Made in Malaysia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS TAB -->
+  <section class="section" id="tab-process" style="display:none;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">How It Works</span>
+        <h2>A Simple Four-Step Process</h2>
+        <p>From your first enquiry to delivered goods — here's what working with us looks like.</p>
+      </div>
+    </div>
+
+    <div class="process-strip">
+      <div class="container">
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="process-step__num">1</div>
+            <div class="process-step__title">Get in Touch</div>
+            <div class="process-step__desc">WhatsApp us with your fabric category, quantity and any other details. We'll respond within the same business day.</div>
+          </div>
+          <div class="process-step">
+            <div class="process-step__num">2</div>
+            <div class="process-step__title">Review Samples</div>
+            <div class="process-step__desc">For larger orders, we send fabric swatches and specs so you can confirm the quality before committing.</div>
+          </div>
+          <div class="process-step">
+            <div class="process-step__num">3</div>
+            <div class="process-step__title">Confirm & Pay</div>
+            <div class="process-step__desc">Once specs are agreed, we issue a quotation. Payment is accepted via card, instant transfer or cash at our showroom.</div>
+          </div>
+          <div class="process-step">
+            <div class="process-step__num">4</div>
+            <div class="process-step__title">Delivery</div>
+            <div class="process-step__desc">We pack and dispatch via our preferred logistics partner. Tracking shared on request.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top:56px;text-align:center;">
+      <h3 style="font-size:1.4rem;color:var(--navy);margin-bottom:14px;">Ready to start?</h3>
+      <p style="color:var(--ink-soft);margin-bottom:24px;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.6;">The fastest way to begin is a quick WhatsApp message describing what you need. Our team replies with options the same day.</p>
+      <a href="https://wa.me/60123456789?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20textile%20order." class="btn btn--navy" target="_blank" rel="noopener">Send Us a WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container">
+      <h2>Looking for a Reliable Wholesale Partner?</h2>
+      <p>Get in touch with our team to discuss your fabric and garment requirements. Same-day WhatsApp replies, and visits to our Pudu showroom available by appointment.</p>
+      <div class="cta-strip__btns">
+        <a href="https://wa.me/60123456789" class="btn btn--navy" target="_blank" rel="noopener">WhatsApp Us Now</a>
+        <a href="index.html#contact" class="btn btn--outline">View Contact Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer-brand-name">PNM Fashion</div>
+          <div style="font-size:0.66rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:600;">Textile Wholesale · Est. 1992</div>
+          <p class="footer-tagline">Reliable wholesale supplier of fabric, songket, sarees and ready-made garments. Based in Kuala Lumpur, serving Malaysia and beyond since 1992.</p>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.7;">Registered in Malaysia<br>Company No. 200101018629-K</div>
+        </div>
+        <div>
+          <div class="footer-heading">Navigate</div>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="catalog.html" class="footer-link">Products & Services</a>
+          <a href="index.html#contact" class="footer-link">Contact</a>
+        </div>
+        <div>
+          <div class="footer-heading">Reach Us</div>
+          <a href="https://wa.me/60123456789" class="footer-link">WhatsApp · +60 12-345 6789</a>
+          <a href="tel:+60390746663" class="footer-link">Hotline · +60 3-9074 6663</a>
+          <a href="mailto:hello@pnmfashion.com" class="footer-link">hello@pnmfashion.com</a>
+          <span class="footer-link" style="cursor:default;">Jalan Pudu, Kuala Lumpur</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PNM Fashion Textiles. All rights reserved.</span>
+        <span>EST. 1992 · KUALA LUMPUR</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/60123456789" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script src="assets/js/data.js"></script>
+  <script>
+    // Mobile menu
+    const mobBtn = document.getElementById('mobBtn');
+    const mobDrawer = document.getElementById('mobDrawer');
+    const mobOverlay = document.getElementById('mobOverlay');
+    function closeMob() { mobBtn.classList.remove('open'); mobDrawer.classList.remove('open'); mobOverlay.classList.remove('open'); document.body.style.overflow = ''; }
+    function openMob() { mobBtn.classList.add('open'); mobDrawer.classList.add('open'); mobOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    mobBtn.addEventListener('click', () => mobBtn.classList.contains('open') ? closeMob() : openMob());
+    mobOverlay.addEventListener('click', closeMob);
+    mobDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMob));
+
+    // Tab switching
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = {
+      products: document.getElementById('tab-products'),
+      services: document.getElementById('tab-services'),
+      process:  document.getElementById('tab-process'),
+    };
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const targetTab = btn.dataset.tab;
+        Object.entries(tabContents).forEach(([key, el]) => {
+          el.style.display = key === targetTab ? '' : 'none';
+        });
+        window.scrollTo({ top: document.querySelector('.tabs-section').offsetTop, behavior: 'smooth' });
+      });
+    });
+
+    // Product card builder
+    function productCardHTML(p) {
+      const waMsg = encodeURIComponent(`Hi, I'm interested in ${p.name} (SKU: ${p.sku}). Can you share pricing?`);
+      const badge = p.isBestSeller ? '<div class="product-card__badge">Best Seller</div>'
+                  : p.isNew ? '<div class="product-card__badge product-card__badge--navy">New In</div>' : '';
+      return `
+        <div class="product-card">
+          ${badge}
+          <div class="product-card__img">
+            <img src="${p.image || 'assets/images/shirt_1.jpeg'}" alt="${p.name}" loading="lazy" onerror="this.style.background='var(--bg-soft)';this.style.minHeight='200px';">
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__name">${p.name}</div>
+            <div class="product-card__meta">${p.sku} · ${p.fabric || ''}</div>
+            <a href="https://wa.me/60123456789?text=${waMsg}" class="product-card__cta" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Enquire via WhatsApp
+            </a>
+          </div>
+        </div>`;
+    }
+
+    // Category filter
+    let currentCat = 'all';
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      let items = typeof PRODUCTS !== 'undefined' ? PRODUCTS : [];
+      if (currentCat !== 'all') items = items.filter(p => p.category === currentCat);
+      items = items.slice(0, 24); // limit to 24 for performance
+      if (items.length === 0) {
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--ink-faint);padding:40px;">No items in this category yet.</p>';
+        return;
+      }
+      grid.innerHTML = items.map(p => productCardHTML(p)).join('');
+    }
+
+    document.querySelectorAll('.cat-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentCat = pill.dataset.cat;
+        renderProducts();
+      });
+    });
+
+    // Read ?cat= URL param
+    const params = new URLSearchParams(location.search);
+    const initCat = params.get('cat');
+    if (initCat) {
+      const pill = document.querySelector(`[data-cat="${initCat}"]`);
+      if (pill) pill.click();
+    }
+
+    // Initial render
+    setTimeout(renderProducts, 50);
+  </script>
+</body>
+</html>

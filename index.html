@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PNM Fashion Textiles — Wholesale Fabric Supplier in Kuala Lumpur</title>
+  <meta name="description" content="Reliable wholesale fabric and textile supplier in Kuala Lumpur since 1992. Songket, sarees, kaftans, cotton, polyester, blends. WhatsApp for quotation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231E3A5F'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='26' fill='%23E8B547' text-anchor='middle' font-weight='700'%3EP%3C/text%3E%3C/svg%3E">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAF6F0;
+      --bg-soft: #F2EAE0;
+      --bg-card: #FFFFFF;
+      --ink: #1C1510;
+      --ink-soft: #4A3830;
+      --ink-faint: #8A7870;
+      --navy: #6B1A1A;
+      --navy-deep: #4A0E0E;
+      --navy-light: #8B2020;
+      --gold: #C9952A;
+      --gold-soft: #E8C97A;
+      --teal: #6B3A1A;
+      --line: rgba(28,31,38,0.1);
+      --line-soft: rgba(28,31,38,0.06);
+      --shadow: 0 4px 20px rgba(28,31,38,0.06);
+      --shadow-lg: 0 12px 40px rgba(28,31,38,0.1);
+      --t: 280ms cubic-bezier(0.4,0,0.2,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; font-size: 15px; font-weight: 400; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    h1,h2,h3,h4 { font-family: 'Lora', Georgia, serif; font-weight: 500; line-height: 1.2; letter-spacing: -0.01em; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+    @media (max-width: 768px) { .container { padding: 0 20px; } }
+
+    .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ── HEADER ── */
+    .topbar {
+      background: var(--navy-deep);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.74rem;
+      padding: 8px 0;
+    }
+    .topbar__inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .topbar__left, .topbar__right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .topbar a { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); transition: color var(--t); }
+    .topbar a:hover { color: var(--gold-soft); }
+    .topbar svg { width: 13px; height: 13px; }
+    @media (max-width: 640px) { .topbar { font-size: 0.7rem; } .topbar__left { display: none; } }
+
+    .site-header {
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line-soft);
+      box-shadow: 0 1px 3px rgba(28,31,38,0.03);
+    }
+    .header__inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; gap: 24px; }
+    @media (max-width: 768px) { .header__inner { padding: 14px 20px; } }
+
+    .header__logo { display: flex; align-items: center; gap: 12px; }
+    .header__logo-mark {
+      width: 44px; height: 44px;
+      background: var(--navy);
+      color: var(--gold);
+      display: grid; place-items: center;
+      font-family: 'Lora', serif;
+      font-size: 1.4rem; font-weight: 700;
+      border-radius: 8px;
+    }
+    .header__logo-text {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .header__logo-name { font-family: 'Lora', serif; font-size: 1.15rem; font-weight: 600; color: var(--navy); line-height: 1; letter-spacing: 0.02em; }
+    .header__logo-sub { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; }
+
+    .header__nav { display: flex; gap: 32px; align-items: center; }
+    @media (max-width: 720px) { .header__nav { display: none; } }
+    .header__nav a {
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+      transition: color var(--t);
+      position: relative;
+      padding: 6px 0;
+    }
+    .header__nav a:hover, .header__nav a.active { color: var(--navy); }
+    .header__nav a.active::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px; background: var(--gold);
+    }
+    .header__cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #25D366; color: white;
+      padding: 10px 20px;
+      font-size: 0.78rem; font-weight: 600;
+      border-radius: 6px;
+      transition: all var(--t);
+    }
+    .header__cta:hover { background: #1fbb5a; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(37,211,102,0.3); }
+    .header__cta svg { width: 14px; height: 14px; }
+
+    /* Hamburger */
+    .mob-btn {
+      display: none;
+      width: 40px; height: 40px;
+      background: none; border: none; cursor: pointer;
+      flex-direction: column; justify-content: center; align-items: center;
+      gap: 5px;
+    }
+    .mob-btn span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 300ms ease; }
+    .mob-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .mob-btn.open span:nth-child(2) { opacity: 0; }
+    .mob-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 720px) { .mob-btn { display: flex; } }
+
+    /* Mobile drawer */
+    .mob-drawer {
+      position: fixed; top: 0; right: -100%;
+      width: min(320px, 85vw); height: 100vh;
+      background: var(--bg);
+      z-index: 1000;
+      padding: 80px 32px 32px;
+      transition: right 350ms cubic-bezier(0.4,0,0.2,1);
+      overflow-y: auto;
+      box-shadow: -8px 0 24px rgba(0,0,0,0.1);
+    }
+    .mob-drawer.open { right: 0; }
+    .mob-drawer a {
+      display: block;
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      color: var(--navy);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .mob-drawer a.active { color: var(--gold); }
+    .mob-drawer-wa {
+      background: #25D366; color: white !important;
+      text-align: center; border-radius: 6px;
+      margin-top: 24px; padding: 14px !important;
+      border: none !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 0.85rem !important;
+      font-weight: 600;
+    }
+    .mob-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+    .mob-overlay.open { display: block; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.84rem; font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer; border: none;
+      transition: all var(--t);
+      border-radius: 6px;
+    }
+    .btn--navy { background: var(--navy); color: white; }
+    .btn--navy:hover { background: var(--navy-deep); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(30,58,95,0.25); }
+    .btn--gold { background: var(--gold); color: var(--ink); }
+    .btn--gold:hover { background: #D8A53A; transform: translateY(-1px); }
+    .btn--outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+    .btn--outline:hover { background: var(--navy); color: white; }
+    .btn--outline-white { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.6); }
+    .btn--outline-white:hover { background: rgba(255,255,255,0.1); border-color: white; }
+    .btn--wa { background: #25D366; color: white; }
+    .btn--wa:hover { background: #1fbb5a; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(37,211,102,0.3); }
+    .btn--lg { padding: 15px 36px; font-size: 0.9rem; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-light) 100%);
+      color: white;
+      overflow: hidden;
+      padding: 100px 0 120px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(232,181,71,0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.06) 0%, transparent 40%);
+    }
+    .hero__pattern {
+      position: absolute; inset: 0;
+      opacity: 0.05;
+      background-image: 
+        linear-gradient(45deg, transparent 48%, white 49%, white 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, white 49%, white 51%, transparent 52%);
+      background-size: 30px 30px;
+    }
+    .hero__inner { position: relative; z-index: 2; text-align: center; max-width: 820px; margin: 0 auto; }
+    .hero__badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(232,181,71,0.15);
+      color: var(--gold-soft);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border: 1px solid rgba(232,181,71,0.3);
+      margin-bottom: 28px;
+    }
+    .hero__title {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .hero__title em { color: var(--gold-soft); font-style: italic; }
+    .hero__sub {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0 auto 40px;
+    }
+    .hero__ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+    .hero__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 720px;
+      margin: 0 auto;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 60px 0 80px; }
+      .hero__stats { grid-template-columns: 1fr; gap: 16px; padding-top: 28px; }
+      .hero__ctas { flex-direction: column; align-items: center; }
+      .hero__ctas .btn { width: 100%; max-width: 280px; justify-content: center; }
+    }
+    .hero__stat-num {
+      font-family: 'Lora', serif;
+      font-size: 2.4rem;
+      color: var(--gold-soft);
+      line-height: 1;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .hero__stat-label {
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      font-weight: 500;
+    }
+
+    /* ── SECTION ── */
+    .section { padding: 80px 0; }
+    .section--tight { padding: 56px 0; }
+    .section--soft { background: var(--bg-soft); }
+    .section-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+    .section-header h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 12px 0 16px; color: var(--navy); }
+    .section-header p { font-size: 0.96rem; color: var(--ink-soft); line-height: 1.7; }
+
+    /* ── FABRIC CATEGORIES ── */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .cat-grid { grid-template-columns: 1fr; } }
+
+    .cat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line-soft);
+      overflow: hidden;
+      transition: all var(--t);
+      display: block;
+      border-radius: 8px;
+    }
+    .cat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+    .cat-card__img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative;
+      background: var(--bg-soft);
+    }
+    .cat-card__img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 700ms ease;
+    }
+    .cat-card:hover .cat-card__img img { transform: scale(1.06); }
+    .cat-card__tag {
+      position: absolute;
+      top: 14px; right: 14px;
+      background: var(--gold);
+      color: var(--ink);
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .cat-card__body { padding: 24px; }
+    .cat-card__name { font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+    .cat-card__desc { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.6; margin-bottom: 18px; }
+    .cat-card__link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.78rem; font-weight: 600;
+      color: var(--navy);
+      transition: gap var(--t);
+    }
+    .cat-card__link:hover { gap: 10px; color: var(--gold); }
+
+    /* ── SERVICES ── */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) { .service-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .service-grid { grid-template-columns: 1fr; } }
+
+    .service-card {
+      background: var(--bg-card);
+      padding: 32px 28px;
+      border-radius: 8px;
+      border: 1px solid var(--line-soft);
+      transition: all var(--t);
+    }
+    .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .service-card__icon {
+      width: 52px; height: 52px;
+      background: rgba(232,181,71,0.12);
+      color: var(--gold);
+      border-radius: 12px;
+      display: grid; place-items: center;
+      margin-bottom: 18px;
+    }
+    .service-card__icon svg { width: 24px; height: 24px; }
+    .service-card__title { font-family: 'Lora', serif; font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .service-card__desc { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.6; }
+
+    /* ── WHO WE SERVE ── */
+    .serve-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 768px) { .serve-grid { grid-template-columns: 1fr; } }
+    .serve-card {
+      text-align: center;
+      padding: 36px 24px;
+      background: var(--bg-card);
+      border-radius: 8px;
+      border-top: 3px solid var(--gold);
+    }
+    .serve-card__icon {
+      width: 64px; height: 64px;
+      background: var(--navy);
+      color: var(--gold);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      margin: 0 auto 16px;
+    }
+    .serve-card__icon svg { width: 28px; height: 28px; }
+    .serve-card__title { font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+    .serve-card__desc { font-size: 0.86rem; color: var(--ink-soft); }
+
+    /* ── WHY US ── */
+    .why-block {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: center;
+    }
+    @media (max-width: 900px) { .why-block { grid-template-columns: 1fr; gap: 40px; } }
+
+    .why-block__image {
+      position: relative;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .why-block__image img { width: 100%; height: 100%; object-fit: cover; }
+    .why-block__image::after {
+      content: 'Est. 1992';
+      position: absolute; bottom: 24px; left: 24px;
+      background: var(--navy);
+      color: var(--gold);
+      padding: 10px 18px;
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border-radius: 4px;
+    }
+    .why-block__body h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); color: var(--navy); margin: 14px 0 24px; }
+    .why-list { display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px; }
+    .why-item { display: flex; gap: 16px; }
+    .why-item__num {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .why-item__text { font-size: 0.96rem; color: var(--ink-soft); line-height: 1.6; padding-top: 6px; }
+    .why-item__text strong { color: var(--navy); font-weight: 600; display: block; margin-bottom: 2px; font-size: 1rem; }
+
+    /* ── BIG STATS STRIP ── */
+    .stats-strip {
+      background: var(--navy);
+      color: white;
+      padding: 72px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .stats-strip::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 30%, rgba(232,181,71,0.1) 0%, transparent 60%);
+    }
+    .stats-strip__inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    @media (max-width: 768px) { .stats-strip__inner { grid-template-columns: 1fr; gap: 32px; } .stats-strip { padding: 56px 0; } }
+    .big-stat-num {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .big-stat-label {
+      font-size: 0.96rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 280px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ── PARTNERS ── */
+    .partner-row {
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
+    .partner-logo {
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--ink-faint);
+      letter-spacing: 0.05em;
+      opacity: 0.7;
+      transition: opacity var(--t);
+    }
+    .partner-logo:hover { opacity: 1; color: var(--navy); }
+    .partner-logo--badge {
+      padding: 8px 16px;
+      border: 2px solid var(--ink-faint);
+      border-radius: 4px;
+    }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 820px; margin: 0 auto; }
+    .faq-item {
+      background: var(--bg-card);
+      border-radius: 8px;
+      border: 1px solid var(--line-soft);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: box-shadow var(--t);
+    }
+    .faq-item.open { box-shadow: var(--shadow); }
+    .faq-q {
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.96rem;
+      user-select: none;
+    }
+    .faq-q__icon {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      background: var(--bg-soft);
+      color: var(--navy);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      font-size: 1.2rem;
+      font-weight: 400;
+      transition: all var(--t);
+    }
+    .faq-item.open .faq-q__icon {
+      background: var(--gold);
+      transform: rotate(45deg);
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 350ms ease, padding 350ms ease;
+      padding: 0 24px;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 24px 22px; }
+
+    /* ── CONTACT SECTION ── */
+    .contact-section {
+      background: var(--navy);
+      color: white;
+      padding: 80px 0;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 36px; } .contact-section { padding: 56px 0; } }
+
+    .contact-section h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); color: white; margin: 12px 0 18px; }
+    .contact-section h2 em { color: var(--gold-soft); }
+    .contact-section .eyebrow { color: var(--gold-soft); }
+    .contact-intro { color: rgba(255,255,255,0.78); line-height: 1.7; margin-bottom: 28px; font-size: 0.98rem; }
+
+    .contact-info { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
+    .contact-info-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      transition: background var(--t);
+    }
+    .contact-info-item:hover { background: rgba(255,255,255,0.1); }
+    .contact-info-item__icon {
+      width: 36px; height: 36px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 8px;
+      display: grid; place-items: center;
+      flex-shrink: 0;
+    }
+    .contact-info-item__icon svg { width: 16px; height: 16px; }
+    .contact-info-item__label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 2px; font-weight: 500; }
+    .contact-info-item__value { color: white; font-weight: 500; font-size: 0.92rem; }
+
+    .social-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .social-btn {
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      transition: all var(--t);
+    }
+    .social-btn:hover { background: var(--gold); color: var(--navy); transform: translateY(-2px); }
+    .social-btn svg { width: 18px; height: 18px; }
+
+    .contact-form-card {
+      background: white;
+      color: var(--ink);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+    }
+    @media (max-width: 600px) { .contact-form-card { padding: 28px 22px; } }
+    .contact-form-card h3 { font-family: 'Lora', serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 6px; }
+    .contact-form-card > p { color: var(--ink-soft); font-size: 0.88rem; margin-bottom: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .form-group { margin-bottom: 12px; }
+    .form-group label { display: block; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; font-weight: 600; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: var(--ink);
+      transition: border-color var(--t);
+      border-radius: 6px;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--navy); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .hours-strip {
+      background: var(--bg-soft);
+      padding: 36px 0;
+    }
+    .hours-strip__inner {
+      display: flex;
+      gap: 36px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hours-item { display: flex; gap: 14px; align-items: center; }
+    .hours-item__icon {
+      width: 40px; height: 40px;
+      background: var(--navy);
+      color: var(--gold);
+      border-radius: 8px;
+      display: grid; place-items: center;
+      flex-shrink: 0;
+    }
+    .hours-item__icon svg { width: 18px; height: 18px; }
+    .hours-item__label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+    .hours-item__value { color: var(--navy); font-weight: 600; font-size: 0.92rem; font-family: 'Lora', serif; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--navy-deep);
+      color: rgba(255,255,255,0.75);
+      padding: 48px 0 20px;
+    }
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 36px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 20px;
+    }
+    @media (max-width: 720px) { .footer__inner { grid-template-columns: 1fr; gap: 24px; } }
+    .footer-brand-name { font-family: 'Lora', serif; font-size: 1.4rem; color: white; font-weight: 600; margin-bottom: 8px; }
+    .footer-tagline { font-size: 0.86rem; line-height: 1.6; color: rgba(255,255,255,0.55); margin-bottom: 14px; }
+    .footer-heading { font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; font-weight: 600; }
+    .footer-link { display: block; font-size: 0.86rem; color: rgba(255,255,255,0.55); margin-bottom: 9px; transition: color var(--t); }
+    .footer-link:hover { color: white; }
+    .footer-bottom { display: flex; justify-content: space-between; font-size: 0.74rem; color: rgba(255,255,255,0.4); flex-wrap: wrap; gap: 8px; }
+
+    /* WhatsApp float */
+    .wa-float {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      width: 56px; height: 56px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      z-index: 998;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+      transition: transform 200ms ease;
+      overflow: hidden;
+    }
+    .wa-float svg { width: 28px; height: 28px; }
+    .wa-float:hover { transform: scale(1.1); }
+
+    /* Animations */
+    @keyframes fadeUp { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: none; } }
+    .fade-up { animation: fadeUp 600ms ease backwards; }
+    .d1 { animation-delay: 80ms; }
+    .d2 { animation-delay: 180ms; }
+    .d3 { animation-delay: 280ms; }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="mailto:hello@pnmfashion.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          hello@pnmfashion.com
+        </a>
+        <a href="tel:+60390746663">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 12.7 19.79 19.79 0 012.12 4.07A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Hotline: +60 3-9074 6663
+        </a>
+      </div>
+      <div class="topbar__right">
+        <span>Mon–Sat · KL Showroom Open</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-mark">P</div>
+        <div class="header__logo-text">
+          <div class="header__logo-name">PNM Fashion</div>
+          <div class="header__logo-sub">Textile Wholesale · Since 1992</div>
+        </div>
+      </a>
+      <nav class="header__nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="catalog.html">Products & Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="https://wa.me/60123456789?text=Hi%20PNM%20Fashion%2C%20I%27d%20like%20to%20request%20a%20quotation." class="header__cta" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        WhatsApp Quote
+      </a>
+      <button class="mob-btn" id="mobBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mob-overlay" id="mobOverlay"></div>
+  <nav class="mob-drawer" id="mobDrawer">
+    <a href="index.html" class="active">Home</a>
+    <a href="catalog.html">Products & Services</a>
+    <a href="#contact">Contact</a>
+    <a href="https://wa.me/60123456789?text=Hi%20PNM%20Fashion%2C%20I%27d%20like%20to%20request%20a%20quotation." class="mob-drawer-wa" target="_blank" rel="noopener">WhatsApp Quote</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__pattern"></div>
+    <div class="container hero__inner">
+      <span class="hero__badge fade-up">★ Trusted Textile Supplier Since 1992</span>
+      <h1 class="hero__title fade-up d1">
+        Textile Wholesale Supplier<br>
+        for <em>Businesses That Last.</em>
+      </h1>
+      <p class="hero__sub fade-up d2">
+        Supplying dependable fabrics to garment factories, fashion brands, uniform makers and textile resellers across Malaysia. Clear specifications, practical MOQs and over three decades of service.
+      </p>
+      <div class="hero__ctas fade-up d2">
+        <a href="catalog.html" class="btn btn--gold btn--lg">View Product Categories</a>
+        <a href="https://wa.me/60123456789?text=Hi%20PNM%20Fashion%2C%20I%27d%20like%20to%20request%20a%20quotation." class="btn btn--outline-white btn--lg" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp for Quotation
+        </a>
+      </div>
+      <div class="hero__stats fade-up d3">
+        <div>
+          <div class="hero__stat-num">30+</div>
+          <div class="hero__stat-label">Years of Sourcing</div>
+        </div>
+        <div>
+          <div class="hero__stat-num">500+</div>
+          <div class="hero__stat-label">Active Designs</div>
+        </div>
+        <div>
+          <div class="hero__stat-num">KL</div>
+          <div class="hero__stat-label">Local Warehouse</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FABRIC CATEGORIES -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Product Categories</span>
+        <h2>Fabric Categories & Textile Ranges</h2>
+        <p>From traditional songket and Indian sarees to versatile cotton and polyester blends, we stock textiles that suit every category of buyer — wholesale, retail and bespoke production.</p>
+      </div>
+
+      <div class="cat-grid">
+        <a href="catalog.html?cat=songket" class="cat-card">
+          <div class="cat-card__img">
+            <img src="assets/images/person_image_44.jpeg" alt="Songket Collection">
+            <span class="cat-card__tag">Best Seller</span>
+          </div>
+          <div class="cat-card__body">
+            <div class="cat-card__name">Songket Collection</div>
+            <p class="cat-card__desc">Hand-woven Terengganu songket with gold and silver metallic thread. Limited availability, sourced directly from artisan weavers.</p>
+            <span class="cat-card__link">Explore Range →</span>
+          </div>
+        </a>
+
+        <a href="catalog.html?cat=sarees" class="cat-card">
+          <div class="cat-card__img">
+            <img src="assets/images/person_image_38.jpeg" alt="Sarees and Salwar Kameez">
+          </div>
+          <div class="cat-card__body">
+            <div class="cat-card__name">Sarees & Salwar Kameez</div>
+            <p class="cat-card__desc">Traditional Indian textiles sourced from Surat. Premium silk, cotton and rayon blends suited for daily wear and bridal occasions.</p>
+            <span class="cat-card__link">Explore Range →</span>
+          </div>
+        </a>
+
+        <a href="catalog.html?cat=kaftans" class="cat-card">
+          <div class="cat-card__img">
+            <img src="assets/images/WhatsApp_Image_20260512_at_9_33_54_PM.jpeg" alt="Kaftans">
+            <span class="cat-card__tag">New In</span>
+          </div>
+          <div class="cat-card__body">
+            <div class="cat-card__name">Kaftans & Baju Kurung</div>
+            <p class="cat-card__desc">Breathable, tropical-ready silhouettes in print-forward designs. Sourced specifically for Malaysian climate and modesty preferences.</p>
+            <span class="cat-card__link">Explore Range →</span>
+          </div>
+        </a>
+
+        <a href="catalog.html?cat=cotton" class="cat-card">
+          <div class="cat-card__img">
+            <img src="assets/images/shirt_85.jpeg" alt="Cotton Fabric">
+          </div>
+          <div class="cat-card__body">
+            <div class="cat-card__name">Premium Cotton</div>
+            <p class="cat-card__desc">Soft, breathable cotton in plain and printed varieties. Reliable for daily wear, uniform manufacturing and small-batch fashion lines.</p>
+            <span class="cat-card__link">Explore Range →</span>
+          </div>
+        </a>
+
+        <a href="catalog.html?cat=menswear" class="cat-card">
+          <div class="cat-card__img">
+            <img src="assets/images/shirt_195.jpeg" alt="Mens Shirts">
+          </div>
+          <div class="cat-card__body">
+            <div class="cat-card__name">Mens Shirts</div>
+            <p class="cat-card__desc">Cotton, linen and blended shirts in classic and contemporary cuts. Bulk-ready stock for resellers and uniform suppliers.</p>
+            <span class="cat-card__link">Explore Range →</span>
+          </div>
+        </a>
+
+        <a href="catalog.html?cat=kidswear" class="cat-card">
+          <div class="cat-card__img">
+            <img src="assets/images/shirt_25.jpeg" alt="Boys Wear">
+          </div>
+          <div class="cat-card__body">
+            <div class="cat-card__name">Boys Wear & Kidswear</div>
+            <p class="cat-card__desc">Comfortable cotton blends and printed designs for children ages 2-12. Durable construction for active wear.</p>
+            <span class="cat-card__link">Explore Range →</span>
+          </div>
+        </a>
+      </div>
+
+      <div style="text-align:center;margin-top:48px;">
+        <a href="catalog.html" class="btn btn--navy">View Full Catalog →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Our Services</span>
+        <h2>We Stand by Our Quality, Not Just Our Name</h2>
+        <p>From wholesale supply to bespoke services, we adapt to the needs of garment factories, fashion brands and resellers alike.</p>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div class="service-card__title">Wholesale Textile Supply</div>
+          <p class="service-card__desc">Bulk fabric and finished garment supply at competitive rates with consistent quality assurance. Practical MOQs.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="service-card__title">Custom Printing & Dyeing</div>
+          <p class="service-card__desc">Bespoke prints and dye services for emerging fashion brands and limited-run collections. MOQ terms apply.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/></svg>
+          </div>
+          <div class="service-card__title">Eco-Conscious Packaging</div>
+          <p class="service-card__desc">Recycled and reusable packaging options. We aim to minimise waste at every step of the supply chain.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="service-card__title">Packing & Local Delivery</div>
+          <p class="service-card__desc">Reliable in-house delivery across Klang Valley and nearby drop-points. Distance terms apply.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <div class="service-card__title">Shipment to East Malaysia</div>
+          <p class="service-card__desc">Carefully coordinated shipping to Sabah and Sarawak via trusted logistics partners. Safe, tracked, and on schedule.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div class="service-card__title">Export — Made in Malaysia</div>
+          <p class="service-card__desc">International shipment for overseas buyers seeking authentic Malaysian and Indian textile production.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE SERVE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Who We Serve</span>
+        <h2>Partnering with Businesses<br>That Demand Reliability</h2>
+        <p>Whether you need monthly repeat supply or project-based sourcing, we adapt to your operational pace.</p>
+      </div>
+
+      <div class="serve-grid">
+        <div class="serve-card">
+          <div class="serve-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="serve-card__title">Garment Factories</div>
+          <p class="serve-card__desc">Bulk supply with consistent specifications for predictable production.</p>
+        </div>
+        <div class="serve-card">
+          <div class="serve-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <div class="serve-card__title">Fashion Brands</div>
+          <p class="serve-card__desc">Curated fabric ranges suited for limited-edition and designer collections.</p>
+        </div>
+        <div class="serve-card">
+          <div class="serve-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          </div>
+          <div class="serve-card__title">Textile Resellers</div>
+          <p class="serve-card__desc">Flexible MOQs and wholesale pricing for retailers, boutiques and online stores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="why-block">
+        <div class="why-block__image">
+          <img src="assets/images/person_image_28.jpeg" alt="PNM Fashion textile heritage">
+        </div>
+        <div class="why-block__body">
+          <span class="eyebrow">Why Choose Us</span>
+          <h2>Three Decades of Sourcing<br>Done Right.</h2>
+          <div class="why-list">
+            <div class="why-item">
+              <div class="why-item__num">1</div>
+              <div class="why-item__text">
+                <strong>Established Since 1992</strong>
+                Over 30 years sourcing textiles between Surat and Kuala Lumpur.
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item__num">2</div>
+              <div class="why-item__text">
+                <strong>Reliable Core Fabric Supply</strong>
+                Consistent stock for repeat business and recurring orders.
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item__num">3</div>
+              <div class="why-item__text">
+                <strong>Clear Specifications</strong>
+                Detailed fabric specs reduce production risk and rejection rates.
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item__num">4</div>
+              <div class="why-item__text">
+                <strong>Practical MOQs</strong>
+                Realistic order minimums for both growing brands and established factories.
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item__num">5</div>
+              <div class="why-item__text">
+                <strong>Malaysia-Based Export Experience</strong>
+                Capable of handling overseas shipping with appropriate documentation.
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/60123456789?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20textile%20supply." class="btn btn--navy" target="_blank" rel="noopener">Speak to Our Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIG STATS -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-strip__inner">
+        <div>
+          <div class="big-stat-num">100,000+</div>
+          <div class="big-stat-label">Rolls of fabric across categories</div>
+        </div>
+        <div>
+          <div class="big-stat-num">100+</div>
+          <div class="big-stat-label">Unique textures and weaves</div>
+        </div>
+        <div>
+          <div class="big-stat-num">50+</div>
+          <div class="big-stat-label">Vibrant colour selections</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="section--tight">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:32px;">
+        <span class="eyebrow">Our Corporate Customers</span>
+      </div>
+      <div class="partner-row">
+        <span class="partner-logo">SOUTHERN GARMENTS</span>
+        <span class="partner-logo partner-logo--badge">EXPORT CO.</span>
+        <span class="partner-logo">KL FASHION HOUSE</span>
+        <span class="partner-logo partner-logo--badge">ATELIER 21</span>
+        <span class="partner-logo">RETAIL GROUP MY</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Frequently Asked</span>
+        <h2>Got Questions? We've Got You Covered.</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>What types of fabrics do you supply?</span>
+            <span class="faq-q__icon">+</span>
+          </div>
+          <div class="faq-a">
+            We stock a wide variety of woven and knitted textiles including cotton (plain and printed), polyester, polyester-cotton blends, viscose, rayon, linen, satin and our signature traditional ranges — songket, Indian sarees, kaftans and baju kurung.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>How do I place a wholesale order?</span>
+            <span class="faq-q__icon">+</span>
+          </div>
+          <div class="faq-a">
+            The quickest way is to WhatsApp us with the items or fabric categories you're interested in. We'll respond with current stock, specifications, MOQs and pricing within the same business day. Visits to our Pudu showroom are also welcome by appointment.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Do you offer fabric samples?</span>
+            <span class="faq-q__icon">+</span>
+          </div>
+          <div class="faq-a">
+            Yes. We can prepare swatches for serious enquiries, particularly when an order is being considered. WhatsApp us with your requirements and we'll arrange sample dispatch.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>What are your delivery options?</span>
+            <span class="faq-q__icon">+</span>
+          </div>
+          <div class="faq-a">
+            Local Klang Valley deliveries are handled by our own van fleet. For Peninsular Malaysia, we work with trusted courier partners. East Malaysia and overseas shipments are coordinated through approved logistics handlers.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Can you do custom printing or dyeing?</span>
+            <span class="faq-q__icon">+</span>
+          </div>
+          <div class="faq-a">
+            Yes. Custom print runs and dye matching are available for brands and designers. MOQ terms apply — get in touch via WhatsApp with your design and quantity, and we'll prepare a quotation.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>What payment methods do you accept?</span>
+            <span class="faq-q__icon">+</span>
+          </div>
+          <div class="faq-a">
+            We accept Visa and Mastercard (credit and debit), instant bank transfers and cash payments at our showroom. For larger orders, deposit arrangements can be discussed.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>What is your return policy?</span>
+            <span class="faq-q__icon">+</span>
+          </div>
+          <div class="faq-a">
+            Returns are accepted within 5 days of purchase with original receipt, provided the fabric has not been cut from any edge and remains in its original packaging.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="eyebrow">Get in Touch</span>
+          <h2>Looking for a Reliable<br><em>Wholesale Partner?</em></h2>
+          <p class="contact-intro">Get in touch with our team to discuss your fabric requirements. We respond to WhatsApp within hours and visits to our Pudu showroom can be arranged by appointment.</p>
+
+          <div class="contact-info">
+            <a href="https://wa.me/60123456789" class="contact-info-item" target="_blank" rel="noopener">
+              <div class="contact-info-item__icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-item__label">WhatsApp · Fastest</div>
+                <div class="contact-info-item__value">+60 12-345 6789</div>
+              </div>
+            </a>
+            <a href="tel:+60390746663" class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Hotline</div>
+                <div class="contact-info-item__value">+60 3-9074 6663</div>
+              </div>
+            </a>
+            <a href="mailto:hello@pnmfashion.com" class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Email</div>
+                <div class="contact-info-item__value">hello@pnmfashion.com</div>
+              </div>
+            </a>
+            <a href="https://maps.app.goo.gl/" class="contact-info-item" target="_blank" rel="noopener">
+              <div class="contact-info-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Showroom · By Appointment</div>
+                <div class="contact-info-item__value">Jalan Pudu, Kuala Lumpur</div>
+              </div>
+            </a>
+          </div>
+
+          <div style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:12px;font-weight:600;">Connect with us</div>
+          <div class="social-row">
+            <a href="https://wa.me/60123456789" class="social-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://t.me/" class="social-btn" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 2L2 9.5l6.5 2.5L18 5l-7 8 .5 6.5L15 16l5.5 4z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/" class="social-btn" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43V9.45A8.21 8.21 0 0021 11.4V8a4.85 4.85 0 01-1.41-1.31z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3>Request a Quotation</h3>
+          <p>Fill in the form and we'll come back with options and pricing the same business day.</p>
+          <form onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your name</label>
+                <input type="text" name="name" required placeholder="e.g. Siti Aminah">
+              </div>
+              <div class="form-group">
+                <label>Company (optional)</label>
+                <input type="text" name="company" placeholder="e.g. ABC Garments Sdn Bhd">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>WhatsApp number</label>
+                <input type="tel" name="phone" required placeholder="+60 12 345 6789">
+              </div>
+              <div class="form-group">
+                <label>Email (optional)</label>
+                <input type="email" name="email" placeholder="optional">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Category of interest</label>
+              <select name="category">
+                <option value="">Select a category...</option>
+                <option>Songket</option>
+                <option>Sarees and Salwar Kameez</option>
+                <option>Kaftans and Baju Kurung</option>
+                <option>Cotton fabrics (bulk)</option>
+                <option>Polyester and blends (bulk)</option>
+                <option>Mens shirts</option>
+                <option>Boys wear and kidswear</option>
+                <option>Custom printing or dyeing</option>
+                <option>Mixed enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your requirements</label>
+              <textarea name="message" required placeholder="Tell us about quantity, fabric type, intended use, timeline..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--navy" style="width:100%;justify-content:center;">Send Enquiry</button>
+            <p style="font-size:0.7rem;color:var(--ink-faint);margin-top:12px;text-align:center;">Your details are used only to reply to your enquiry.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS -->
+  <div class="hours-strip">
+    <div class="container">
+      <div class="hours-strip__inner">
+        <div class="hours-item">
+          <div class="hours-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="hours-item__label">Mon – Fri</div>
+            <div class="hours-item__value">9:00 AM – 5:30 PM</div>
+          </div>
+        </div>
+        <div class="hours-item">
+          <div class="hours-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="hours-item__label">Saturday</div>
+            <div class="hours-item__value">9:00 AM – 2:30 PM</div>
+          </div>
+        </div>
+        <div class="hours-item">
+          <div class="hours-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          </div>
+          <div>
+            <div class="hours-item__label">Showroom</div>
+            <div class="hours-item__value">Pudu, Kuala Lumpur</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer-brand-name">PNM Fashion</div>
+          <div style="font-size:0.66rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:600;">Textile Wholesale · Est. 1992</div>
+          <p class="footer-tagline">Reliable wholesale supplier of fabric, songket, sarees and ready-made garments. Based in Kuala Lumpur, serving Malaysia and beyond since 1992.</p>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.7;">Registered in Malaysia<br>Company No. 200101018629-K</div>
+        </div>
+        <div>
+          <div class="footer-heading">Navigate</div>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="catalog.html" class="footer-link">Products & Services</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+        <div>
+          <div class="footer-heading">Reach Us</div>
+          <a href="https://wa.me/60123456789" class="footer-link">WhatsApp · +60 12-345 6789</a>
+          <a href="tel:+60390746663" class="footer-link">Hotline · +60 3-9074 6663</a>
+          <a href="mailto:hello@pnmfashion.com" class="footer-link">hello@pnmfashion.com</a>
+          <span class="footer-link" style="cursor:default;">Jalan Pudu, Kuala Lumpur</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PNM Fashion Textiles. All rights reserved.</span>
+        <span>EST. 1992 · KUALA LUMPUR</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/60123456789" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script>
+    // Mobile menu
+    const mobBtn = document.getElementById('mobBtn');
+    const mobDrawer = document.getElementById('mobDrawer');
+    const mobOverlay = document.getElementById('mobOverlay');
+    function closeMob() {
+      mobBtn.classList.remove('open');
+      mobDrawer.classList.remove('open');
+      mobOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function openMob() {
+      mobBtn.classList.add('open');
+      mobDrawer.classList.add('open');
+      mobOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    mobBtn.addEventListener('click', () => mobBtn.classList.contains('open') ? closeMob() : openMob());
+    mobOverlay.addEventListener('click', closeMob);
+    mobDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMob));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Contact form → WhatsApp
+    function submitForm(e) {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const data = Object.fromEntries(fd.entries());
+      const msg = `*New Quotation Request — PNM Fashion*%0A%0A` +
+        `*Name:* ${encodeURIComponent(data.name)}%0A` +
+        `*Company:* ${encodeURIComponent(data.company || '—')}%0A` +
+        `*Phone:* ${encodeURIComponent(data.phone)}%0A` +
+        `*Email:* ${encodeURIComponent(data.email || '—')}%0A` +
+        `*Category:* ${encodeURIComponent(data.category || '—')}%0A%0A` +
+        `*Requirements:*%0A${encodeURIComponent(data.message)}`;
+      setTimeout(() => window.open(`https://wa.me/60123456789?text=${msg}`, '_blank'), 200);
+    }
+  </script>
+</body>
+</html>
