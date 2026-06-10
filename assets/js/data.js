@@ -5,6 +5,7 @@
 
 // Categories
 const RAJTEX_CATEGORIES = [
+  { id: 'songket', name: 'Songket/Samping', name_ms: 'Songket/Samping', name_id: 'Songket/Samping', count: 0 },
   { id: 'sarees', name: 'Sarees & Suits', name_ms: 'Sari & Sut', name_id: 'Sari & Setelan', count: 0 },
   { id: 'kaftans', name: 'Kaftans & Baju Kurung', name_ms: 'Kaftan & Baju Kurung', name_id: 'Kaftan & Baju Kurung', count: 0 },
   { id: 'kidswear', name: 'Boys & Kidswear', name_ms: 'Pakaian Kanak-Kanak', name_id: 'Pakaian Anak-Anak', count: 0 },
@@ -31,6 +32,19 @@ function priceTier(base) {
 // Build catalog
 const PRODUCTS = [];
 
+const FEATURED_SONGKET_SAMPING = [
+  { name: 'Royal Sapphire Checkered Songket', type: 'Songket', sku: 'PNM-SNG-1001' },
+  { name: 'Indigo Blossom Heritage Songket', type: 'Songket', sku: 'PNM-SNG-1002' },
+  { name: 'Mulberry Rose Classic Songket', type: 'Songket', sku: 'PNM-SNG-1003' },
+  { name: 'Emerald Jade Checkered Songket', type: 'Songket', sku: 'PNM-SNG-1004' },
+  { name: 'Maroon Blossom Samping', type: 'Samping', sku: 'PNM-SMP-1001' },
+  { name: 'Azure Garden Samping', type: 'Samping', sku: 'PNM-SMP-1002' },
+  { name: 'Imperial Blue Heritage Samping', type: 'Samping', sku: 'PNM-SMP-1003' },
+  { name: 'Pink Gold Royale Samping', type: 'Samping', sku: 'PNM-SMP-1004' },
+  { name: 'Graphite Gold Blossom Samping', type: 'Samping', sku: 'PNM-SMP-1005' },
+  { name: 'Ivory Orchid Samping', type: 'Samping', sku: 'PNM-SMP-1006' }
+];
+
 const FEATURED_KAFTANS = [
   'Abstract Floral Slate Grey Kaftan',
   'Baroque Scroll Ivory Kaftan',
@@ -43,6 +57,29 @@ const FEATURED_KAFTANS = [
   'Turquoise Leaf Wave Kaftan',
   'Vintage Rose Sky Blue Kaftan'
 ];
+
+FEATURED_SONGKET_SAMPING.forEach((item, i) => {
+  PRODUCTS.push({
+    id: `sgk-new-${String(i + 1).padStart(3,'0')}`,
+    sku: item.sku,
+    name: item.name,
+    category: 'songket',
+    collection: 'PNM Songket/Samping Selection',
+    fabric: item.type,
+    color: 'Assorted',
+    image: `assets/images/${item.name}.jpeg`,
+    price: priceTier(item.type === 'Songket' ? 180 : 120),
+    moq: 20,
+    stock: randInt(40, 260),
+    pieces: item.type,
+    sizes: ['Standard'],
+    isNew: true,
+    isTrending: i < 4,
+    isBestSeller: i === 0,
+    description: `${item.name} for wholesale traditional textile and festivewear retailers.`,
+    quoteCount: randInt(20, 160)
+  });
+});
 
 // Sarees & suits — use person_image_*.jpeg (the salwar/saree shots)
 const personImageNumbers = [1, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97];
