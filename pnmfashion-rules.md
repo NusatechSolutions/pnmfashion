@@ -321,8 +321,8 @@ https://wa.me/60122245717
 Address:
 
 ```text
-Campbell Complex, Lot 25 & 26 Lower Ground
-98 Jalan Dang Wangi
+Campbell Complex, Lot 101 & 106 First Floor
+Jalan Dang Wangi
 50100 Kuala Lumpur
 Federal Territory of Kuala Lumpur
 Malaysia

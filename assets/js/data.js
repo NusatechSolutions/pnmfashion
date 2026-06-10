@@ -31,6 +31,19 @@ function priceTier(base) {
 // Build catalog
 const PRODUCTS = [];
 
+const FEATURED_KAFTANS = [
+  'Abstract Floral Slate Grey Kaftan',
+  'Baroque Scroll Ivory Kaftan',
+  'Botanical Bloom Plum Kaftan',
+  'Garden Blossom Ivory Kaftan',
+  'Midnight Floral Border Kaftan',
+  'Midnight Floral Cascade Kaftan',
+  'Paisley Heritage Black Kaftan',
+  'Pastel Botanical Sketch Kaftan',
+  'Turquoise Leaf Wave Kaftan',
+  'Vintage Rose Sky Blue Kaftan'
+];
+
 // Sarees & suits — use person_image_*.jpeg (the salwar/saree shots)
 const personImageNumbers = [1, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97];
 personImageNumbers.forEach((n, i) => {
@@ -61,6 +74,29 @@ personImageNumbers.forEach((n, i) => {
 });
 
 // Kaftans / Baju Kurung — use phone_image_*.jpeg
+FEATURED_KAFTANS.forEach((name, i) => {
+  PRODUCTS.push({
+    id: `kaf-new-${String(i + 1).padStart(3,'0')}`,
+    sku: `PNM-KAF-${String(1015 + i).padStart(4,'0')}`,
+    name: name,
+    category: 'kaftans',
+    collection: 'PNM Kaftan Selection',
+    fabric: 'Rayon Print',
+    color: 'Assorted',
+    image: `assets/images/${name}.jpeg`,
+    price: priceTier(95),
+    moq: 20,
+    stock: randInt(60, 400),
+    pieces: '1 Piece Kaftan / Baju Kurung Cut',
+    sizes: ['Free Size', 'L', 'XL'],
+    isNew: true,
+    isTrending: i < 4,
+    isBestSeller: i === 0,
+    description: `${name} with assorted printed motifs for wholesale kaftan and baju kurung retailers.`,
+    quoteCount: randInt(20, 180)
+  });
+});
+
 for (let n = 1; n <= 11; n++) {
   const fabric = rand(['Rayon Print', 'Cotton Voile', 'Modal Stretch', 'Crepe Silk']);
   const color = rand(['Fuchsia', 'Lilac', 'Sand', 'Emerald', 'Coral']);
@@ -157,7 +193,7 @@ const RESELLER_TESTIMONIALS = [
 
 // Showroom / contact info
 const SHOWROOMS = [
-  { city: 'Kuala Lumpur', address: 'Campbell Complex, Lot 25 & 26 Lower Ground, 98 Jalan Dang Wangi, 50100 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia', phone: '+60 12-224 5717', wa: '60122245717', hours: 'Mon–Sat 10am – 7pm', flag: '🇲🇾' },
+  { city: 'Kuala Lumpur', address: 'Campbell Complex, Lot 101 & 106 First Floor, Jalan Dang Wangi, 50100 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia', phone: '+60 12-224 5717', wa: '60122245717', hours: 'Mon–Sat 10am – 7pm', flag: '🇲🇾' },
   { city: 'Surat (HQ)', address: '4th Floor, Millennium Tower, Ring Road, Surat, Gujarat 395002', phone: '+91 98250 12345', wa: '919825012345', hours: 'Mon–Sat 11am – 8pm IST', flag: '🇮🇳' },
   { city: 'Jakarta (Liaison)', address: 'Tanah Abang Block A, Lt. 3 Los DD-32, Jakarta Pusat', phone: '+62 821 1234 5678', wa: '6282112345678', hours: 'By appointment', flag: '🇮🇩' }
 ];
