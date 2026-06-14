@@ -679,7 +679,6 @@
       const grid = document.getElementById('productGrid');
       let items = typeof PRODUCTS !== 'undefined' ? PRODUCTS : [];
       if (currentCat !== 'all') items = items.filter(p => p.category === currentCat);
-      items = items.slice(0, 24); // limit to 24 for performance
       if (items.length === 0) {
         grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--ink-faint);padding:40px;">No items in this category yet.</p>';
         return;
