@@ -370,6 +370,19 @@ Image rules:
 - If replacing images, preserve the catalog's large-selection feeling.
 - If unused images are found, report them first. Do not delete unless the user explicitly approves deletion.
 
+## Product Upload Workflow
+
+When new product images are provided:
+
+- Generate meaningful product names.
+- Preserve original image files.
+- Never overwrite existing images.
+- Maintain existing catalog card structure.
+- Maintain mobile responsiveness.
+- Add products to correct categories.
+- Validate all images load correctly.
+- Commit changes but do not push unless explicitly instructed.
+
 ## SEO Rules
 
 Current SEO files:
