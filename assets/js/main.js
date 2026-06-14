@@ -227,7 +227,7 @@
     state.cart.forEach((item, i) => {
       const p = PRODUCTS.find(x => x.id === item.id);
       if (!p) return;
-      msg += `${i + 1}. *${p.name}*\n   SKU: ${p.sku}\n   Qty: ${item.qty} pcs\n\n`;
+      msg += `${i + 1}. *${p.name}*\n   Qty: ${item.qty} pcs\n\n`;
     });
     msg += `Total pieces: ${cartTotalPieces()}\n`;
     msg += `Estimated value: ${formatCurrency(cartTotalMYR())}\n\n`;
@@ -296,7 +296,6 @@
           <img src="${p.image}" alt="${p.name}" class="quote-item__img" loading="lazy">
           <div>
             <div class="quote-item__name">${p.name}</div>
-            <div class="quote-item__sku">${p.sku}</div>
             <div class="qty-control">
               <button onclick="Rajtex.updateCartQty('${p.id}', ${item.qty - 10})" aria-label="Decrease">−</button>
               <input type="number" min="20" value="${item.qty}" onchange="Rajtex.updateCartQty('${p.id}', parseInt(this.value)||20)">
@@ -490,16 +489,7 @@
           </div>
         </div>
         <div class="product-card__body">
-          <span class="product-card__cat">${p.collection} · ${p.fabric}</span>
           <a href="product.html?id=${p.id}"><h3 class="product-card__name">${p.name}</h3></a>
-          <span class="product-card__sku">${p.sku}</span>
-          <div class="product-card__meta">
-            <div>
-              <span class="product-card__price" data-price-myr="${p.price.bulk}">${formatCurrency(p.price.bulk)}</span>
-              <span class="product-card__price-converted">/pc · MOQ ${p.moq}</span>
-            </div>
-            <span class="product-card__moq">${p.stock} pcs</span>
-          </div>
         </div>
       </article>`;
   }

@@ -1,4 +1,4 @@
-# PNM Fashion Repository Map
+﻿# PNM Fashion Repository Map
 
 This file helps future AI agents quickly understand the PNM Fashion website repository, its active control points, assets, business details, and deployment workflow.
 
@@ -181,7 +181,6 @@ Controls:
 - `PRODUCTS`
 - Product category assignments
 - Product names
-- SKUs
 - Fabrics
 - Colors
 - Product image paths
@@ -391,7 +390,7 @@ The active logo contains:
 
 - A maroon square logo mark with the letter `P`
 - The text `PNM Fashion`
-- The subtitle `Textile Wholesale · Since 1992`
+- The subtitle `Textile Wholesale Â· Since 1992`
 
 ### Favicon
 

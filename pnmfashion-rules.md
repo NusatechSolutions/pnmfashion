@@ -1,4 +1,4 @@
-# PNM Fashion Website Operating Manual
+﻿# PNM Fashion Website Operating Manual
 
 This file is the permanent operating manual for future work on the PNM Fashion website. It must be read before making changes to the site.
 
@@ -134,7 +134,7 @@ Typography rules:
 - Use small uppercase eyebrow labels sparingly for section context.
 - Keep body copy readable and business-focused.
 - Keep product card names compact.
-- Keep metadata such as SKU and fabric in small uppercase or compact text.
+- Keep product card text focused on product names only.
 - Avoid excessive font sizes inside cards, footers, forms, and product grids.
 - Do not use negative letter spacing for regular text.
 - Do not add trendy tech fonts or overly luxurious fashion typefaces.
@@ -234,7 +234,7 @@ Current product cards:
 - Load images from product data
 - Show optional "Best Seller" or "New In" badges
 - Show product name
-- Show SKU and fabric metadata
+- Show product names only; do not display internal catalog or fabric metadata on catalog cards
 - Show "Enquire via WhatsApp" as the CTA
 - Hide prices
 
@@ -243,7 +243,7 @@ Product card rules:
 - Preserve product images as the strongest visual element.
 - Keep product cards compact and scannable.
 - Keep product names short enough to avoid awkward wrapping.
-- Keep SKU and fabric metadata visible.
+- Keep product names visible and avoid internal-code metadata in visitor-facing catalog cards.
 - Keep WhatsApp as the primary product action.
 - Keep pricing hidden unless the business explicitly asks to show prices.
 - Do not turn product cards into consumer retail cards with add-to-cart, ratings, wishlist, or discount badges unless specifically requested.
@@ -260,7 +260,7 @@ Important data patterns:
 - Boys and kidswear use `shirt_1.jpeg` through `shirt_120.jpeg`
 - Mens shirts use `shirt_121.jpeg` through `shirt_200.jpeg`
 - Product categories include `sarees`, `kaftans`, `kidswear`, and `menswear`
-- Products include SKU, name, category, fabric, color, image, price object, MOQ, stock, pieces, sizes, badges, description, and quoteCount
+- Products include name, category, fabric, color, image, price object, MOQ, stock, pieces, sizes, badges, description, and quoteCount. Internal catalog metadata should not be displayed or reintroduced for catalog cards.
 
 Data rules:
 
