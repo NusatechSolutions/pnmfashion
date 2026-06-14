@@ -605,7 +605,7 @@
               <h4>Catalog</h4>
               <ul class="site-footer__links">
                 <li><a href="catalog.html?cat=sarees">Sarees & Suits</a></li>
-                <li><a href="catalog.html?cat=kaftans">Kaftans & Baju Kurung</a></li>
+                <li><a href="catalog.html?cat=kaftans">Kaftans/Abaya</a></li>
                 <li><a href="catalog.html?cat=menswear">Mens Shirts</a></li>
                 <li><a href="catalog.html?cat=kidswear">Boys Wear</a></li>
                 <li><a href="collections.html">All Collections</a></li>
