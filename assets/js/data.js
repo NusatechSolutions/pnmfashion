@@ -432,6 +432,24 @@ const ABAYA_KAFTAN_PRODUCTS = [
 
 ABAYA_KAFTAN_PRODUCTS.forEach(item => PRODUCTS.push(item));
 
+const MOVED_MENS_SHIRT_PRODUCTS = [
+  { imageNo: 1, sku: 'RJ-KAL-7820', name: 'Teal Regent Crepe Mens Shirt', collection: 'PNM Mens Shirt Selection', fabric: 'Crepe', color: 'Teal', basePrice: 125, stock: 180 },
+  { imageNo: 14, sku: 'RJ-KAS-8024', name: 'Taupe Heritage Linen Mens Shirt', collection: 'PNM Mens Shirt Selection', fabric: 'Linen Blend', color: 'Taupe', basePrice: 135, stock: 165 },
+  { imageNo: 15, sku: 'RJ-MON-4010', name: 'Onyx Cotton Slub Executive Shirt', collection: 'PNM Mens Shirt Selection', fabric: 'Cotton Slub', color: 'Black', basePrice: 120, stock: 190 },
+  { imageNo: 16, sku: 'RJ-VRI-2301', name: 'Mustard Crepe Mandarin Mens Shirt', collection: 'PNM Mens Shirt Selection', fabric: 'Crepe', color: 'Mustard', basePrice: 125, stock: 155 },
+  { imageNo: 17, sku: 'RJ-MEH-7804', name: 'Royal Navy Georgette Mens Shirt', collection: 'PNM Mens Shirt Selection', fabric: 'Georgette', color: 'Navy', basePrice: 130, stock: 175 },
+  { imageNo: 18, sku: 'RJ-RIW-1746', name: 'Rose Banarasi Casual Overshirt', collection: 'PNM Mens Shirt Selection', fabric: 'Banarasi Silk', color: 'Rose', basePrice: 145, stock: 140 },
+  { imageNo: 19, sku: 'RJ-KAL-7824', name: 'Aubergine Rayon Classic Mens Shirt', collection: 'PNM Mens Shirt Selection', fabric: 'Rayon', color: 'Aubergine', basePrice: 115, stock: 170 },
+  { imageNo: 20, sku: 'RJ-RIW-4242', name: 'Charcoal Rayon Resort Overshirt', collection: 'PNM Mens Shirt Selection', fabric: 'Rayon', color: 'Charcoal', basePrice: 118, stock: 160 },
+  { imageNo: 21, sku: 'RJ-COA-2939', name: 'Mauve Crepe Resort Mens Shirt', collection: 'PNM Mens Shirt Selection', fabric: 'Crepe', color: 'Mauve', basePrice: 122, stock: 150 },
+  { imageNo: 22, sku: 'RJ-MON-7620', name: 'Turquoise Modal Resort Mens Shirt', collection: 'PNM Mens Shirt Selection', fabric: 'Modal', color: 'Turquoise', basePrice: 128, stock: 168 },
+  { imageNo: 23, sku: 'RJ-KAL-1882', name: 'Cobalt Pure Silk Resort Shirt', collection: 'PNM Mens Shirt Selection', fabric: 'Pure Silk', color: 'Cobalt', basePrice: 155, stock: 135 },
+  { imageNo: 24, sku: 'RJ-MEH-6713', name: 'Olive Chanderi Casual Overshirt', collection: 'PNM Mens Shirt Selection', fabric: 'Chanderi', color: 'Olive', basePrice: 138, stock: 145 }
+];
+
+const MOVED_KIDSWEAR_PRODUCTS = [
+  { imageNo: 25, sku: 'RJ-KAS-3091', name: 'Sandstone Junior Cotton Slub Shirt', collection: 'Junior Heritage', fabric: 'Cotton Slub', color: 'Sandstone', basePrice: 88, stock: 120 }
+];
 const FEATURED_SONGKET_SAMPING = [
   { name: 'Royal Sapphire Checkered Songket', type: 'Songket', sku: 'PNM-SNG-1001' },
   { name: 'Indigo Blossom Heritage Songket', type: 'Songket', sku: 'PNM-SNG-1002' },
@@ -505,7 +523,7 @@ FEATURED_SONGKET_SAMPING.forEach((item, i) => {
 });
 
 // Sarees & suits — use person_image_*.jpeg (the salwar/saree shots)
-const personImageNumbers = [1, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97];
+const personImageNumbers = [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97];
 personImageNumbers.forEach((n, i) => {
   const collection = rand(COLLECTION_NAMES);
   const fabric = rand(FABRICS);
@@ -583,6 +601,28 @@ for (let n = 1; n <= 11; n++) {
   });
 }
 
+MOVED_KIDSWEAR_PRODUCTS.forEach((item, i) => {
+  PRODUCTS.push({
+    id: `kid-moved-${String(i + 1).padStart(3,'0')}`,
+    sku: item.sku,
+    name: item.name,
+    category: 'kidswear',
+    collection: item.collection,
+    fabric: item.fabric,
+    color: item.color,
+    image: `assets/images/person_image_${item.imageNo}.jpeg`,
+    price: priceTier(item.basePrice),
+    moq: 20,
+    stock: item.stock,
+    pieces: '1 Shirt',
+    sizes: ['2-3y', '4-5y', '6-7y', '8-9y', '10-12y'],
+    isNew: true,
+    isTrending: i === 0,
+    isBestSeller: false,
+    description: `${item.name} in ${item.fabric.toLowerCase()}, moved into Boys Wear for wholesale kidswear buyers.`,
+    quoteCount: 135
+  });
+});
 // Boys / Kidswear shirts — shirt_1 through shirt_120
 for (let n = 1; n <= 120; n++) {
   const fabric = rand(['Cotton', 'Corduroy', 'Linen Cotton', 'Chambray', 'Cotton Twill']);
@@ -610,6 +650,28 @@ for (let n = 1; n <= 120; n++) {
   });
 }
 
+MOVED_MENS_SHIRT_PRODUCTS.forEach((item, i) => {
+  PRODUCTS.push({
+    id: `mns-moved-${String(i + 1).padStart(3,'0')}`,
+    sku: item.sku,
+    name: item.name,
+    category: 'menswear',
+    collection: item.collection,
+    fabric: item.fabric,
+    color: item.color,
+    image: `assets/images/person_image_${item.imageNo}.jpeg`,
+    price: priceTier(item.basePrice),
+    moq: 20,
+    stock: item.stock,
+    pieces: '1 Shirt',
+    sizes: ['M', 'L', 'XL', 'XXL', '3XL'],
+    isNew: true,
+    isTrending: i < 4,
+    isBestSeller: i === 0,
+    description: `${item.name} in ${item.fabric.toLowerCase()}, moved into Mens Shirts for wholesale ready-made shirt buyers.`,
+    quoteCount: 160 - (i * 4)
+  });
+});
 // Mens shirts — shirt_121 through shirt_200
 for (let n = 121; n <= 200; n++) {
   const fabric = rand(['Cotton', 'Linen', 'Cotton Stretch', 'Premium Cotton', 'Modal Cotton']);
