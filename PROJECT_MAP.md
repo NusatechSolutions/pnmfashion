@@ -269,8 +269,12 @@ C:\Users\Sivanesan\Desktop\textile\rajtex\style1\catalog.html
 
 Product generation patterns:
 
-- Sarees and suits use `assets/images/person_image_*.jpeg`
-- Kaftans and baju kurung use `assets/images/phone_image_*.jpeg`
+- Standalone Sarees use `assets/images/sareepic*.jpeg`
+- Standalone Songket uses `assets/images/songketpic*.jpeg` and `assets/images/songketpic*.jpg`
+- Standalone Samping uses `assets/images/sampingpic*.jpeg` and `assets/images/sampingpic*.jpg`
+- Standalone Abaya uses `assets/images/abayapic*.jpg`
+- Standalone Kaftan uses `assets/images/kaftanpic*.jpeg`
+- Standalone Suit Dupatta uses `assets/images/suitspic*.jpeg`
 - Boys and kidswear use `assets/images/shirt_1.jpeg` through `assets/images/shirt_120.jpeg`
 - Mens shirts use `assets/images/shirt_121.jpeg` through `assets/images/shirt_200.jpeg`
 
@@ -278,7 +282,11 @@ Current product category IDs:
 
 ```text
 sarees
-kaftans
+songket
+samping
+abaya
+kaftan
+suit-dupatta
 kidswear
 menswear
 ```
@@ -331,6 +339,12 @@ C:\Users\Sivanesan\Desktop\textile\rajtex\style1\assets\images
 Current image families:
 
 ```text
+assets/images/sareepic*.jpeg
+assets/images/songketpic*.jpeg and assets/images/songketpic*.jpg
+assets/images/sampingpic*.jpeg and assets/images/sampingpic*.jpg
+assets/images/abayapic*.jpg
+assets/images/kaftanpic*.jpeg
+assets/images/suitspic*.jpeg
 assets/images/person_image_*.jpeg
 assets/images/phone_image_*.jpeg
 assets/images/shirt_*.jpeg
@@ -342,6 +356,12 @@ assets/images/rajtex-logo-original.jpg
 Current image counts by family:
 
 ```text
+sareepic: 15
+songketpic: 16
+sampingpic: 15
+abayapic: 15
+kaftanpic: 10
+suitspic: 12
 person_image: 85
 phone_image: 11
 shirt: 200

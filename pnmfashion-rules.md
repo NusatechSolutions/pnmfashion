@@ -255,11 +255,15 @@ The current product system is generated in `assets/js/data.js`.
 
 Important data patterns:
 
-- Sarees and suits use `person_image_*.jpeg`
-- Kaftans and baju kurung use `phone_image_*.jpeg`
+- Standalone Sarees use `sareepic*.jpeg`
+- Standalone Songket uses `songketpic*.jpeg` and `songketpic*.jpg`
+- Standalone Samping uses `sampingpic*.jpeg` and `sampingpic*.jpg`
+- Standalone Abaya uses `abayapic*.jpg`
+- Standalone Kaftan uses `kaftanpic*.jpeg`
+- Standalone Suit Dupatta uses `suitspic*.jpeg`
 - Boys and kidswear use `shirt_1.jpeg` through `shirt_120.jpeg`
 - Mens shirts use `shirt_121.jpeg` through `shirt_200.jpeg`
-- Product categories include `sarees`, `kaftans`, `kidswear`, and `menswear`
+- Product categories include `sarees`, `songket`, `samping`, `abaya`, `kaftan`, `suit-dupatta`, `kidswear`, and `menswear`
 - Products include name, category, fabric, color, image, price object, MOQ, stock, pieces, sizes, badges, description, and quoteCount. Internal catalog metadata should not be displayed or reintroduced for catalog cards.
 
 Data rules:
@@ -363,6 +367,12 @@ Image files live under `assets/images/`.
 
 Current image families include:
 
+- `sareepic*.jpeg`
+- `songketpic*.jpeg` and `songketpic*.jpg`
+- `sampingpic*.jpeg` and `sampingpic*.jpg`
+- `abayapic*.jpg`
+- `kaftanpic*.jpeg`
+- `suitspic*.jpeg`
 - `person_image_*.jpeg`
 - `phone_image_*.jpeg`
 - `shirt_*.jpeg`
