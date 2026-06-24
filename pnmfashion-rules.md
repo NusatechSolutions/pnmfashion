@@ -303,19 +303,19 @@ Current contact information:
 WhatsApp:
 
 ```text
-+60122245717
++91 95102 55501
 ```
 
 Display phone:
 
 ```text
-+60 12-224 5717
++91 95102 55501
 ```
 
 WhatsApp link:
 
 ```text
-https://wa.me/60122245717
+https://wa.me/919510255501
 ```
 
 Address:
@@ -326,6 +326,17 @@ Jalan Dang Wangi
 50100 Kuala Lumpur
 Federal Territory of Kuala Lumpur
 Malaysia
+
+E-2-8, Block E, Sri Tanjung
+Jalan USJ 16/7, USJ 16,
+47620 Subang Jaya
+Selangor
+```
+
+Telegram:
+
+```text
+https://t.me/pnmfashion
 ```
 
 Google Maps:
@@ -337,9 +348,10 @@ https://google.com/maps/place/P+%26+M+Fashion/data=!4m2!3m1!1s0x0:0x4d944d886479
 Contact rules:
 
 - Keep WhatsApp as the primary contact method.
-- Use `https://wa.me/60122245717` for WhatsApp links unless explicitly instructed otherwise.
-- Use `tel:+60122245717` for phone links.
-- Display the phone number as `+60 12-224 5717`.
+- Use `https://wa.me/919510255501` for WhatsApp links unless explicitly instructed otherwise.
+- Use `https://t.me/pnmfashion` for Telegram quote links unless explicitly instructed otherwise.
+- Use `tel:+919510255501` for phone links.
+- Display the phone number as `+91 95102 55501`.
 - Keep contact information consistent across topbar, headers, CTAs, contact section, footer, catalog page, product cards, and JavaScript-generated links.
 - Keep Google Maps links pointed to the P & M Fashion listing.
 - Do not reintroduce placeholder numbers, placeholder maps, or old Pudu-only address text.
@@ -480,7 +492,7 @@ Never do the following without explicit user approval:
 Before finishing future website changes, check:
 
 - Contact number is correct
-- WhatsApp links point to `https://wa.me/60122245717`
+- WhatsApp links point to `https://wa.me/919510255501`
 - Address is correct
 - Google Maps link is correct
 - No placeholder phone numbers remain

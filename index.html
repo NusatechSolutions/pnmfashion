@@ -90,7 +90,7 @@
     .header__logo-sub { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; }
 
     .header__nav { display: flex; gap: 32px; align-items: center; }
-    @media (max-width: 720px) { .header__nav { display: none; } }
+    @media (max-width: 980px) { .header__nav { display: none; } }
     .header__nav a {
       font-size: 0.84rem;
       font-weight: 500;
@@ -105,6 +105,8 @@
       position: absolute; bottom: 0; left: 0; right: 0;
       height: 2px; background: var(--gold);
     }
+    .header__actions { display: flex; align-items: center; gap: 10px; }
+    @media (max-width: 720px) { .header__actions { display: none; } }
     .header__cta {
       display: inline-flex; align-items: center; gap: 8px;
       background: #25D366; color: white;
@@ -114,6 +116,8 @@
       transition: all var(--t);
     }
     .header__cta:hover { background: #1fbb5a; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(37,211,102,0.3); }
+    .header__cta--telegram { background: #229ED9; }
+    .header__cta--telegram:hover { background: #1688bf; box-shadow: 0 4px 14px rgba(34,158,217,0.28); }
     .header__cta svg { width: 14px; height: 14px; }
 
     /* Hamburger */
@@ -128,7 +132,7 @@
     .mob-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .mob-btn.open span:nth-child(2) { opacity: 0; }
     .mob-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    @media (max-width: 720px) { .mob-btn { display: flex; } }
+    @media (max-width: 980px) { .mob-btn { display: flex; } }
 
     /* Mobile drawer */
     .mob-drawer {
@@ -155,6 +159,15 @@
       background: #25D366; color: white !important;
       text-align: center; border-radius: 6px;
       margin-top: 24px; padding: 14px !important;
+      border: none !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 0.85rem !important;
+      font-weight: 600;
+    }
+    .mob-drawer-telegram {
+      background: #229ED9; color: white !important;
+      text-align: center; border-radius: 6px;
+      margin-top: 12px; padding: 14px !important;
       border: none !important;
       font-family: 'Poppins', sans-serif !important;
       font-size: 0.85rem !important;
@@ -665,13 +678,17 @@
   <div class="topbar">
     <div class="container topbar__inner">
       <div class="topbar__left">
-        <a href="mailto:hello@pnmfashion.com">
+        <a href="mailto:regunathv@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          hello@pnmfashion.com
+          regunathv@gmail.com
         </a>
-        <a href="tel:+60122245717">
+        <a href="mailto:sethiaprakashpp@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sethiaprakashpp@gmail.com
+        </a>
+        <a href="tel:+919510255501">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 12.7 19.79 19.79 0 012.12 4.07A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Hotline: +60 12-224 5717
+          Hotline: +91 95102 55501
         </a>
       </div>
       <div class="topbar__right">
@@ -695,10 +712,16 @@
         <a href="catalog.html">Products & Services</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a href="https://wa.me/60122245717" class="header__cta" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        WhatsApp Quote
-      </a>
+      <div class="header__actions">
+        <a href="https://wa.me/919510255501" class="header__cta" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp Quote
+        </a>
+        <a href="https://t.me/pnmfashion" class="header__cta header__cta--telegram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.18 18.73 19.3c-.24 1.07-.87 1.33-1.76.83l-4.88-3.6-2.36 2.27c-.26.26-.48.48-.98.48l.35-4.97 9.04-8.17c.39-.35-.09-.55-.61-.2L6.35 12.98 1.54 11.47C.5 11.15.48 10.43 1.76 9.93L20.58 2.68c.87-.32 1.63.2 1.36 1.5Z"/></svg>
+          Telegram Quote
+        </a>
+      </div>
       <button class="mob-btn" id="mobBtn" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -709,7 +732,8 @@
     <a href="index.html" class="active">Home</a>
     <a href="catalog.html">Products & Services</a>
     <a href="#contact">Contact</a>
-    <a href="https://wa.me/60122245717" class="mob-drawer-wa" target="_blank" rel="noopener">WhatsApp Quote</a>
+    <a href="https://wa.me/919510255501" class="mob-drawer-wa" target="_blank" rel="noopener">WhatsApp Quote</a>
+    <a href="https://t.me/pnmfashion" class="mob-drawer-telegram" target="_blank" rel="noopener">Telegram Quote</a>
   </nav>
 
   <!-- HERO -->
@@ -726,7 +750,7 @@
       </p>
       <div class="hero__ctas fade-up d2">
         <a href="catalog.html" class="btn btn--gold btn--lg">View Product Categories</a>
-        <a href="https://wa.me/60122245717" class="btn btn--outline-white btn--lg" target="_blank" rel="noopener">
+        <a href="https://wa.me/919510255501" class="btn btn--outline-white btn--lg" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           WhatsApp for Quotation
         </a>
@@ -976,7 +1000,7 @@
               </div>
             </div>
           </div>
-          <a href="https://wa.me/60122245717" class="btn btn--navy" target="_blank" rel="noopener">Speak to Our Team</a>
+          <a href="https://wa.me/919510255501" class="btn btn--navy" target="_blank" rel="noopener">Speak to Our Team</a>
         </div>
       </div>
     </div>
@@ -1086,31 +1110,40 @@
           <p class="contact-intro">Get in touch with our team to discuss your fabric requirements. We respond to WhatsApp within hours and visits to our Campbell Complex showroom can be arranged by appointment.</p>
 
           <div class="contact-info">
-            <a href="https://wa.me/60122245717" class="contact-info-item" target="_blank" rel="noopener">
+            <a href="https://wa.me/919510255501" class="contact-info-item" target="_blank" rel="noopener">
               <div class="contact-info-item__icon">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
               </div>
               <div>
                 <div class="contact-info-item__label">WhatsApp · Fastest</div>
-                <div class="contact-info-item__value">+60 12-224 5717</div>
+                <div class="contact-info-item__value">+91 95102 55501</div>
               </div>
             </a>
-            <a href="tel:+60122245717" class="contact-info-item">
+            <a href="tel:+919510255501" class="contact-info-item">
               <div class="contact-info-item__icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               </div>
               <div>
                 <div class="contact-info-item__label">Hotline</div>
-                <div class="contact-info-item__value">+60 12-224 5717</div>
+                <div class="contact-info-item__value">+91 95102 55501</div>
               </div>
             </a>
-            <a href="mailto:hello@pnmfashion.com" class="contact-info-item">
+            <a href="mailto:regunathv@gmail.com" class="contact-info-item">
               <div class="contact-info-item__icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <div>
                 <div class="contact-info-item__label">Email</div>
-                <div class="contact-info-item__value">hello@pnmfashion.com</div>
+                <div class="contact-info-item__value">regunathv@gmail.com</div>
+              </div>
+            </a>
+            <a href="mailto:sethiaprakashpp@gmail.com" class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Email</div>
+                <div class="contact-info-item__value">sethiaprakashpp@gmail.com</div>
               </div>
             </a>
             <a href="https://google.com/maps/place/P+%26+M+Fashion/data=!4m2!3m1!1s0x0:0x4d944d8864799f91?sa=X&amp;ved=1t:2428&amp;ictx=111" class="contact-info-item" target="_blank" rel="noopener">
@@ -1119,7 +1152,7 @@
               </div>
               <div>
                 <div class="contact-info-item__label">Showroom · By Appointment</div>
-                <div class="contact-info-item__value">Campbell Complex, Lot 101 &amp; 106 First Floor,<br>Jalan Dang Wangi,<br>50100 Kuala Lumpur,<br>Federal Territory of Kuala Lumpur,<br>Malaysia</div>
+                <div class="contact-info-item__value">Campbell Complex, Lot 101 &amp; 106 First Floor,<br>Jalan Dang Wangi,<br>50100 Kuala Lumpur,<br>Federal Territory of Kuala Lumpur,<br>Malaysia<br><br>E-2-8, Block E, Sri Tanjung<br>Jalan USJ 16/7, USJ 16,<br>47620 Subang Jaya<br>Selangor</div>
               </div>
             </a>
           </div>
@@ -1142,7 +1175,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label>WhatsApp number</label>
-                <input type="tel" name="phone" required placeholder="+60 12 224 5717">
+                <input type="tel" name="phone" required placeholder="+91 95102 55501">
               </div>
               <div class="form-group">
                 <label>Email (optional)</label>
@@ -1229,10 +1262,12 @@
         </div>
         <div>
           <div class="footer-heading">Reach Us</div>
-          <a href="https://wa.me/60122245717" class="footer-link">WhatsApp · +60 12-224 5717</a>
-          <a href="tel:+60122245717" class="footer-link">Hotline · +60 12-224 5717</a>
-          <a href="mailto:hello@pnmfashion.com" class="footer-link">hello@pnmfashion.com</a>
-          <span class="footer-link" style="cursor:default;">Campbell Complex, Lot 101 &amp; 106 First Floor,<br>Jalan Dang Wangi,<br>50100 Kuala Lumpur,<br>Federal Territory of Kuala Lumpur,<br>Malaysia</span>
+          <a href="https://wa.me/919510255501" class="footer-link">WhatsApp · +91 95102 55501</a>
+          <a href="https://t.me/pnmfashion" class="footer-link">Telegram · @pnmfashion</a>
+          <a href="tel:+919510255501" class="footer-link">Hotline · +91 95102 55501</a>
+          <a href="mailto:regunathv@gmail.com" class="footer-link">regunathv@gmail.com</a>
+          <a href="mailto:sethiaprakashpp@gmail.com" class="footer-link">sethiaprakashpp@gmail.com</a>
+          <span class="footer-link" style="cursor:default;">Campbell Complex, Lot 101 &amp; 106 First Floor,<br>Jalan Dang Wangi,<br>50100 Kuala Lumpur,<br>Federal Territory of Kuala Lumpur,<br>Malaysia<br><br>E-2-8, Block E, Sri Tanjung<br>Jalan USJ 16/7, USJ 16,<br>47620 Subang Jaya<br>Selangor</span>
         </div>
       </div>
       <div class="footer-bottom">
@@ -1243,7 +1278,7 @@
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/60122245717" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <a href="https://wa.me/919510255501" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
 
@@ -1290,7 +1325,7 @@
         `*Email:* ${encodeURIComponent(data.email || '—')}%0A` +
         `*Category:* ${encodeURIComponent(data.category || '—')}%0A%0A` +
         `*Requirements:*%0A${encodeURIComponent(data.message)}`;
-      setTimeout(() => window.open('https://wa.me/60122245717', '_blank'), 200);
+      setTimeout(() => window.open('https://wa.me/919510255501', '_blank'), 200);
     }
   </script>
 </body>

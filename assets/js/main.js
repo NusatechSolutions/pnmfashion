@@ -29,7 +29,7 @@
   };
 
   // --- WhatsApp business number (mock)
-  const WA_NUMBER = '60122245717';
+  const WA_NUMBER = '919510255501';
 
   // --- Brand logo (recreated to match the actual RAJTEX identity:
   //     tall serif RAJTEX wordmark + rose mark + "Exclusive" script + tagline.
@@ -615,7 +615,7 @@
               <h4>Stay in the Loop</h4>
               <p style="font-size:0.88rem;color:var(--bg-soft);margin-bottom:16px;line-height:1.6;">Reseller drops, exclusive lots, and early access — straight to your WhatsApp.</p>
               <form class="newsletter" onsubmit="event.preventDefault();Rajtex.toast('You\\'re on the broadcast list — talk soon on WhatsApp.');this.reset();">
-                <input type="text" placeholder="WhatsApp number e.g. +60 12 224 5717" required>
+                <input type="text" placeholder="WhatsApp number e.g. +91 95102 55501" required>
                 <button type="submit">Join</button>
               </form>
               <p class="newsletter-note">We send 1–2 messages a week. Stop anytime.</p>

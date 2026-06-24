@@ -765,7 +765,8 @@ const RESELLER_TESTIMONIALS = [
 
 // Showroom / contact info
 const SHOWROOMS = [
-  { city: 'Kuala Lumpur', address: 'Campbell Complex, Lot 101 & 106 First Floor, Jalan Dang Wangi, 50100 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia', phone: '+60 12-224 5717', wa: '60122245717', hours: 'Mon–Sat 10am – 7pm', flag: '🇲🇾' },
+  { city: 'Kuala Lumpur', address: 'Campbell Complex, Lot 101 & 106 First Floor, Jalan Dang Wangi, 50100 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia', phone: '+91 95102 55501', wa: '919510255501', hours: 'Mon–Sat 10am – 7pm', flag: '🇲🇾' },
+  { city: 'Subang Jaya', address: 'E-2-8, Block E, Sri Tanjung, Jalan USJ 16/7, USJ 16, 47620 Subang Jaya, Selangor', phone: '+91 95102 55501', wa: '919510255501', hours: 'By appointment', flag: '🇲🇾' },
   { city: 'Surat (HQ)', address: '4th Floor, Millennium Tower, Ring Road, Surat, Gujarat 395002', phone: '+91 98250 12345', wa: '919825012345', hours: 'Mon–Sat 11am – 8pm IST', flag: '🇮🇳' },
   { city: 'Jakarta (Liaison)', address: 'Tanah Abang Block A, Lt. 3 Los DD-32, Jakarta Pusat', phone: '+62 821 1234 5678', wa: '6282112345678', hours: 'By appointment', flag: '🇮🇩' }
 ];

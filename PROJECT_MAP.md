@@ -290,13 +290,13 @@ Catalog filtering depends on these IDs. Reuse existing categories where possible
 Official WhatsApp URL:
 
 ```text
-https://wa.me/60122245717
+https://wa.me/919510255501
 ```
 
 Official WhatsApp number:
 
 ```text
-60122245717
+919510255501
 ```
 
 Files that actively generate or contain WhatsApp links:
@@ -561,35 +561,47 @@ https://pnmfashion.com/
 Email:
 
 ```text
-hello@pnmfashion.com
+regunathv@gmail.com
+sethiaprakashpp@gmail.com
 ```
 
 Phone display:
 
 ```text
-+60 12-224 5717
++91 95102 55501
 ```
 
 Phone link:
 
 ```text
-tel:+60122245717
+tel:+919510255501
 ```
 
 WhatsApp:
 
 ```text
-https://wa.me/60122245717
+https://wa.me/919510255501
+```
+
+Telegram:
+
+```text
+https://t.me/pnmfashion
 ```
 
 Address:
 
 ```text
-Campbell Complex, Lot 25 & 26 Lower Ground
-98 Jalan Dang Wangi
+Campbell Complex, Lot 101 & 106 First Floor
+Jalan Dang Wangi
 50100 Kuala Lumpur
 Federal Territory of Kuala Lumpur
 Malaysia
+
+E-2-8, Block E, Sri Tanjung
+Jalan USJ 16/7, USJ 16,
+47620 Subang Jaya
+Selangor
 ```
 
 Google Maps:
